@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: end;
     gap: 20px;
-    padding: 7px;
+    padding: 5px;
 }
 
 small a {
@@ -31,12 +31,13 @@ small a:hover {
 }
 
 #nav {
-    margin: 1em 2em 2em 5em;
+    margin: 1em 2em 0.1em 5em;
 }
 
 #nav .container {
     display: flex;
     justify-content: space-between;
+    
 }
 
 #nav h1 {
@@ -51,7 +52,7 @@ small a:hover {
 
 #nav .container div {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     text-align: center;
     align-items: center;
 }
@@ -117,3 +118,90 @@ footer {
     display: block;
     font-weight: 600;
 }
+
+/* Main */
+
+ .slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+ }
+ .slider img{
+    width: 100%;
+    height: auto;
+    display: none;
+ }
+ img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+ }
+ .slider button{
+    position: absolute;
+    top: 46%;
+    transform: translate(-1%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    /* border-radius: 50%; */
+    padding: 4px 8px;
+    border: none;
+ }
+ .Previous{
+    left: 0px;
+ }
+ .Next{
+    right: 0;
+ }
+ 
+ @keyframes fade{
+    from{opacity: .5}
+    to {opacity: 1;}
+ }
+
+
+/* Main End */
+
+/* 2 carousel start */
+.slider1 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+ }
+ .slider1 img{
+    width: 100%;
+    height: auto;
+    display: none;
+ }
+ img.displaySlide1{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+ }
+ .slider1 button{
+    position: absolute;
+    top: 46%;
+    transform: translate(-1%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    /* border-radius: 50%; */
+    padding: 4px 8px;
+    border: none;
+ }
+ .Previous2{
+    left: 0px;
+ }
+ .Next2{
+    right: 0px;
+ }
+ 
+ @keyframes fade{
+    from{opacity: .5}
+    to {opacity: 1;}
+ }
+/* 2 carousel End */
