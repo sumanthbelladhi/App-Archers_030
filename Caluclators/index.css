@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: end;
     gap: 20px;
-    padding: 7px;
+    padding: 5px;
 }
 
 small a {
@@ -32,7 +32,7 @@ small a:hover {
 }
 
 #nav {
-    margin: 1em 2em 2em 5em;
+    margin: 1em 2em 0.1em 5em;
 }
 
 #nav .container {
