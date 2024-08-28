@@ -37,7 +37,6 @@ small a:hover {
 #nav .container {
     display: flex;
     justify-content: space-between;
-    
 }
 
 #nav h1 {
@@ -119,25 +118,29 @@ footer {
     font-weight: 600;
 }
 
+
 /* Main */
 
- .slider {
+.slider {
     position: relative;
     width: 100%;
     margin: auto;
     overflow: hidden;
- }
- .slider img{
+}
+
+.slider img {
     width: 100%;
     height: auto;
     display: none;
- }
- img.displaySlide{
+}
+
+img.displaySlide {
     display: block;
     animation-name: fade;
     animation-duration: 1.5s;
- }
- .slider button{
+}
+
+.slider button {
     position: absolute;
     top: 46%;
     transform: translate(-1%);
@@ -148,40 +151,51 @@ footer {
     /* border-radius: 50%; */
     padding: 4px 8px;
     border: none;
- }
- .Previous{
+}
+
+.Previous {
     left: 0px;
- }
- .Next{
+}
+
+.Next {
     right: 0;
- }
- 
- @keyframes fade{
-    from{opacity: .5}
-    to {opacity: 1;}
- }
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 
 /* Main End */
 
+
 /* 2 carousel start */
+
 .slider1 {
     position: relative;
     width: 100%;
     margin: auto;
     overflow: hidden;
- }
- .slider1 img{
+}
+
+.slider1 img {
     width: 100%;
     height: auto;
     display: none;
- }
- img.displaySlide1{
+}
+
+img.displaySlide1 {
     display: block;
     animation-name: fade;
     animation-duration: 1.5s;
- }
- .slider1 button{
+}
+
+.slider1 button {
     position: absolute;
     top: 46%;
     transform: translate(-1%);
@@ -192,16 +206,81 @@ footer {
     /* border-radius: 50%; */
     padding: 4px 8px;
     border: none;
- }
- .Previous2{
+}
+
+.Previous2 {
     left: 0px;
- }
- .Next2{
+}
+
+.Next2 {
     right: 0px;
- }
- 
- @keyframes fade{
-    from{opacity: .5}
-    to {opacity: 1;}
- }
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 /* 2 carousel End */
+
+
+/*3 content*/
+
+main {
+    max-width: 1330px;
+    margin: auto;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#card {
+    background-color: white;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#card:hover {
+    transform: translateY(-2px);
+    border: 0.001px solid black;
+}
+
+#card img {
+    max-width: 100%;
+    padding: 0px;
+    height: auto;
+    margin-bottom: 15px;
+    background-color: rgb(247, 248, 250);
+}
+
+.mrp {
+    margin-top: 20px;
+    font-size: .5em;
+}
+
+#card h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#card p {
+    font-size: 14px;
+    color: black;
+    margin: 5px 0;
+}
