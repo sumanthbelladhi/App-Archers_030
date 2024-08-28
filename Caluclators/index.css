@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 body {
     font-family: Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: auto;
 }
 
 .container {
@@ -38,6 +37,7 @@ small a:hover {
 #nav .container {
     display: flex;
     justify-content: space-between;
+    
 }
 
 #nav h1 {
@@ -52,7 +52,7 @@ small a:hover {
 
 #nav .container div {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     text-align: center;
     align-items: center;
 }
@@ -118,3 +118,48 @@ footer {
     display: block;
     font-weight: 600;
 }
+
+/* Main */
+
+ .slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+ }
+ .slider img{
+    width: 100%;
+    height: auto;
+    display: none;
+ }
+ img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+ }
+ .slider button{
+    position: absolute;
+    top: 46%;
+    transform: translate(-1%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    /* border-radius: 50%; */
+    padding: 4px 8px;
+    border: none;
+ }
+ .Previous{
+    left: 0px;
+ }
+ .Next{
+    right: 0;
+ }
+ 
+ @keyframes fade{
+    from{opacity: .5}
+    to {opacity: 1;}
+ }
+
+
+/* Main End */
