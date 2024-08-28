@@ -255,7 +255,6 @@ main {
 }
 
 #card:hover {
-    transform: translateY(-2px);
     border: 0.001px solid black;
 }
 
@@ -265,6 +264,11 @@ main {
     height: auto;
     margin-bottom: 15px;
     background-color: rgb(247, 248, 250);
+    transition: all 0.2s ease-in-out;
+}
+
+#card img:hover {
+    scale: 1.05;
 }
 
 .mrp {
