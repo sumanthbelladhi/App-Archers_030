@@ -3,7 +3,12 @@ const targetUrl = "https://www.casio.com/content/casio/locales/in/en/products/wa
 const baseUrl = "https://www.casio.com";
 
 fetch(proxyUrl + targetUrl)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         if (data && data.data && Array.isArray(data.data)) {
             const products = data.data;
@@ -15,9 +20,7 @@ fetch(proxyUrl + targetUrl)
             });
 
             const flattenedArray = updatedProducts.flat(Infinity);
-
             console.log(flattenedArray);
-
         } else {
             console.error("Unexpected data format", data);
         }
