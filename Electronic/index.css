@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
 body {
     font-family: Helvetica, sans-serif;
-    margin: auto;
+    margin: 0; /* Ensure no margin around the body */
+    padding: 0; /* Ensure no padding around the body */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
     max-width: 1330px;
     margin: auto;
+    
 }
 
 #top-nav {
@@ -15,7 +19,7 @@ body {
 
 #top-nav .container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end; /* Align items to the end */
     gap: 20px;
     padding: 5px;
 }
@@ -31,7 +35,7 @@ small a:hover {
 }
 
 #nav {
-    margin: 1em 2em 0.1em 5em;
+    margin: 1em 2em 0.1em 5em; /* Adjust margins as needed */
 }
 
 #nav .container {
@@ -80,7 +84,7 @@ small a:hover {
 
 footer {
     background-color: rgb(244, 245, 249);
-    padding: 2em 0em;
+    padding: 2em 0;
 }
 
 #footer-one {
@@ -113,7 +117,25 @@ footer {
 }
 
 #footer-five small {
-    margin: 0.9em 0px;
+    margin: 0.9em 0;
     display: block;
     font-weight: 600;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+#main_image {
+    width: 100vw;        /* Full viewport width */
+    height: 100vh;       /* Full viewport height */
+    object-fit: cover;   /* Cover the viewport, maintaining aspect ratio */
+    display: block;      /* Remove bottom space/gap */
+    margin: 0;           /* Remove any margin */
+    padding: 0;          /* Remove any padding */
 }
