@@ -139,3 +139,39 @@ main {
     margin: 0;           /* Remove any margin */
     padding: 0;          /* Remove any padding */
 }
+#below-nav {
+    background-color: rgb(244, 245, 249);
+    padding: 20px;
+    
+}
+
+#below-nav .container {
+    display: flex;
+    justify-content: space-between; /* Pushes the h3 to the left and the a tags to the right */
+    align-items: center; /* Vertically center align items */
+    
+}
+
+#below-nav h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    
+}
+
+#below-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 530;
+    margin-left: 20px; /* Adds space between the a tags */
+}
+
+#below-nav a:hover {
+    text-decoration: underline;
+}
+
+
+#below-nav a:hover {
+    cursor: pointer;
+}
