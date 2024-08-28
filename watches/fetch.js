@@ -10,7 +10,6 @@ fetch(proxyUrl + targetUrl)
         return response.json();
     })
     .then(data => {
-        // Check if data format is as expected
         if (data && data.data && Array.isArray(data.data)) {
             const products = data.data;
             const updatedProducts = products.map(product => {
