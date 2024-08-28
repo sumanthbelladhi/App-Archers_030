@@ -4,22 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>G-SHOCK | MASIO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="icon" href="./Untitled design.png" type="image/png">
-
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./Watches Images/Masio Fevicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c70722c963.js" crossorigin="anonymous"></script>
-    <script src="./fetch.js"></script>
-    <script src="./index.js"></script>
+
+
+
+
+    
+
 </head>
 
 
 
 
 <body>
+    <!-- //Navbar -->
     <nav>
         <div id="top-nav">
             <div class="container">
@@ -34,7 +39,7 @@
                     MASIO
                 </h1>
                 <div>
-                    <small><a href="">Watches</a></small>
+                    <small><a href="/App-Archers_030/watches/index.html">Watches</a></small>
                     <small><a href="">Electronic Musical Instruments</a></small>
                     <small><a href="">Calculators</a></small>
                     <small><a href="">Label Printers & Others</a></small>
@@ -46,7 +51,41 @@
             </div>
         </div>
     </nav>
+    <!-- Navbar End -->
 
+    <!-- Watches Main View  -->
+
+    <div class="slider">
+        <div class="slides">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel/item_1716539814246.casiocoreimg.jpeg/1716540152182/main-banner.jpeg"
+                alt="Shubhman Gill" class="slide">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel/item_1716539812624.casiocoreimg.jpeg/1716539895020/vk-casio-bannerdesktop.jpeg"
+                alt="Vicky Kaushal" class="slide">
+        </div>
+
+        <button class="Previous" onclick="prevSlide()"> &#10094 </button>
+        <button class="Next" onclick="nextSlide()"> &#10095 </button>
+    </div>
+
+    <!-- Watches Main View End -->
+
+    <!-- // -->
+    <div class="slider1">
+        <div class="slides1">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel_copy/item_1721711027014.casiocoreimg.jpeg/1721711054880/desktop-icons.jpeg"
+                alt="" class="slide1">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel_copy/item_1721711029269.casiocoreimg.jpeg/1721711114468/desktop-2100.jpeg"
+                alt="" class="slide1">
+        </div>
+
+        <button class="Previous2" onclick="prevSlide1()"> &#10094 </button>
+        <button class="Next2" onclick="nextSlide1()"> &#10095 </button>
+    </div>
+    <!-- // -->
+
+
+
+    <!-- //footer -->
     <footer>
         <div class="container">
             <div id="footer-one">
@@ -81,7 +120,11 @@
             </div>
         </div>
     </footer>
+    <!-- //footer End -->
 
+
+   <script src="./fetch.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
