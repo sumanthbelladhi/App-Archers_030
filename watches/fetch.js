@@ -7,25 +7,17 @@ fetch(proxyUrl + targetUrl)
     .then(data => {
         if (data && data.data && Array.isArray(data.data)) {
             const products = data.data;
-
             const updatedProducts = products.map(product => {
                 if (product.productAssets && product.productAssets.path) {
                     product.productAssets.path = baseUrl + product.productAssets.path;
                 }
-
-                if (product.productAssetList && Array.isArray(product.productAssetList)) {
-                    product.productAssetList = product.productAssetList.map(asset => {
-                        if (asset.path) {
-                            asset.path = baseUrl + asset.path;
-                        }
-                        return asset;
-                    });
-                }
-
-                return product.productAssetList;
+                return product.productAssets;
             });
 
-            console.log(updatedProducts);
+            const flattenedArray = updatedProducts.flat(Infinity);
+
+            console.log(flattenedArray);
+
         } else {
             console.error("Unexpected data format", data);
         }
