@@ -175,3 +175,60 @@ main {
 #below-nav a:hover {
     cursor: pointer;
 }
+section{
+    max-width: 1330px;
+    margin: auto;
+    background-color: white;
+}
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+}
+
+.product-card {
+    padding: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+
+.product-card:hover{
+    border: 0.001px solid black;
+}
+
+.product-card img {
+    max-width: 100%;
+    padding: 0px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: all 0.2s ease-in-out;
+    background-color: rgb(247, 248, 250);
+}
+.product-card img:hover{
+    scale: 1.05;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product-details h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-details p {
+    margin-top: 20px;
+    font-size: .5em;
+}
+
+
