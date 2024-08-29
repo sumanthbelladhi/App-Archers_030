@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
 body {
     font-family: Helvetica, sans-serif;
@@ -229,4 +230,5 @@ section{
     margin-top: 20px;
     font-size: .5em;
 }
+
 
