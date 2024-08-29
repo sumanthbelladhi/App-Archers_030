@@ -80,3 +80,75 @@ function nextSlide1() {
     slideIndex1++;
     showSlide1(slideIndex1);
 }
+
+
+// Images:
+
+import data from './fetch.js';
+
+const baseUrl = "https://www.casio.com";
+var prices = [];
+
+if (data && data.data && Array.isArray(data.data)) {
+    const products = data.data;
+
+    const updatedProducts = products.map(product => {
+        if (product.productAssets && product.productAssets.path) {
+            product.productAssets.path = baseUrl + product.productAssets.path;
+        }
+        prices.push(product.dispPrice)
+        return { "product": product.productAssets, "id": product.index, "title": product.productName };
+    });
+    console.log(products);
+    const flattenedArray = updatedProducts.flat(Infinity);
+    console.log(flattenedArray);
+    console.log(prices);
+    display(flattenedArray)
+}
+
+function display(arr) {
+    let container = document.getElementById("container");
+    var i = 0;
+    arr.forEach(ele => {
+        let card = document.createElement("div");
+        card.setAttribute("id", "card");
+
+        card.onclick = function() {
+            window.location.href = `./pageinfo.html?id=${ele.id}`
+        }
+
+        let New = document.createElement("div");
+        New.className = "badge-new";
+        New.innerText = "NEW";
+
+        let favorite = document.createElement("div");
+        favorite.className = "favorite-icon";
+        favorite.innerHTML = `<i class="fa-regular fa-heart"></i>`;
+
+        favorite.onclick = function() { favorite.innerHTML = `<i class="fa-solid fa-heart"></i>` }
+
+        let img = document.createElement("img");
+        img.src = ele.product.path;
+
+        let brand = document.createElement("p");
+        brand.innerText = "G-SHOCK";
+
+
+        let title = document.createElement("h2");
+        title.innerText = ele.title;
+
+
+
+        let MRP = document.createElement("small")
+        MRP.classList.add("mrp")
+        MRP.innerText = "MRP"
+
+
+        let price = document.createElement("small")
+        price.innerText = prices[i]
+        i += 1
+
+        card.append(New, favorite, img, brand, title, MRP, price);
+        container.append(card);
+    });
+}

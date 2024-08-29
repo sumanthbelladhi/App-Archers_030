@@ -300,3 +300,24 @@ main {
     color: black;
     margin: 5px 0;
 }
+
+.badge-new {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
