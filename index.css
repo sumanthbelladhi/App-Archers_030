@@ -117,3 +117,326 @@ footer {
     display: block;
     font-weight: 600;
 }
+
+
+/* Main
+
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+img.displaySlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button {
+    position: absolute;
+    top: 46%;
+    transform: translate(-1%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    /* border-radius: 50%; */
+    /* padding: 4px 8px;
+    border: none;
+} */
+/* 
+.Previous {
+    left: 0px;
+}
+
+.Next {
+    right: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 1;
+    }
+}
+ */ 
+
+/* Main End */
+
+
+
+/* 2 carousel start */
+
+/* .slider1 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider1 img {
+    width: 100%;
+    height: auto;
+    display: none;
+    left: 100%;
+    transition: left 0.5s ease-in-out;
+}
+
+img.displaySlide1 {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider1 button {
+    position: absolute;
+    top: 46%;
+    transform: translate(-1%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    /* border-radius: 50%; */
+    /* padding: 4px 8px;
+    border: none;
+} */
+
+/* .Previous2 {
+    left: 0px;
+}
+
+.Next2 {
+    right: 0px;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 1;
+    }
+} */ 
+
+
+/* 2 carousel End */
+
+/* Updated CSS for second carousel with sliding effect */
+
+.slider1 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider1 .slides1 {
+    display: flex; /* Use flexbox to align images in a row */
+    width: 100%;
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.slider1 img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.slider1 button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    padding: 4px 8px;
+    border: none;
+}
+
+.Previous2 {
+    left: 0;
+}
+
+.Next2 {
+    right: 0;
+}
+
+
+/* //Second Carousel */
+
+.slider2 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider2 .slides2 {
+    display: flex; /* Use flexbox to align images in a row */
+    width: 100%;
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.slider2 img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.slider2 button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    padding: 4px 8px;
+    border: none;
+}
+
+.Previous1 {
+    left: 0;
+}
+
+.Next1 {
+    right: 0;
+}
+
+
+
+/* //Third Carousel */
+
+.slider3 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider3 .slides3 {
+    display: flex; /* Use flexbox to align images in a row */
+    width: 100%;
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.slider3 img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.slider3 button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    padding: 4px 8px;
+    border: none;
+}
+
+.Previous3 {
+    left: 0;
+}
+
+.Next3 {
+    right: 0;
+}
+
+
+/*4th Carousel  */
+
+
+.slider4 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider4 img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+img.displaySlide4 {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider4 button {
+    position: absolute;
+    top: 46%;
+    transform: translate(-1%);
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    /* border-radius: 50%; */
+    padding: 4px 8px;
+    border: none;
+}
+
+.Previous4 {
+    left: 0px;
+}
+
+.Next4 {
+    right: 0px;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* 5th image */
+.slider5 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider5 img {
+    width: 100%;
+    height: auto;
+    /* display: none; */
+}
+
+
+
+/* 6th image */
+
+.slider6 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider6 img {
+    width: 100%;
+    height: auto;
+    /* display: none; */
+}
+
