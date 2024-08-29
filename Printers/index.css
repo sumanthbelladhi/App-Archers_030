@@ -78,6 +78,21 @@ small a:hover {
     color: #999;
 }
 
+/* main content */
+
+.slider5 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider5 img {
+    width: 100%;
+    height: auto;
+    /* display: none; */
+}
+
 footer {
     background-color: rgb(244, 245, 249);
     padding: 2em 0em;
@@ -117,3 +132,5 @@ footer {
     display: block;
     font-weight: 600;
 }
+
+
