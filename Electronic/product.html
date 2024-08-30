@@ -1,5 +1,137 @@
-const data = {
-  products: [
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+
+img {
+            cursor: pointer;
+        }
+        
+        img:hover {
+            scale: 1.01;
+        }
+#Fav, #click_to_buy {
+    width: 80%;
+            border: 1px solid black;
+            cursor: pointer;
+            align-self: center;
+            background-color: black;
+            padding: 10px;
+            margin: 5px;
+            color:white;
+            display: block;
+}
+#product-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: sticky;
+            padding: 20px;
+            top: 100px;
+            bottom: 0;
+            align-self: start;
+}
+#product-info{
+    display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+}
+#product-detail{
+    width: 100%;
+            margin: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+}
+</style>
+<body>
+    <nav>
+        <div id="top-nav">
+            <div class="container">
+                <small><a href="">Support</a></small>
+                <small><a href="">Corporate</a></small>
+            </div>
+
+        </div>
+        <div id="nav">
+            <div class="container">
+                <h1>
+                    MASIO
+                </h1>
+                <div>
+                    <small><a href="/App-Archers_030\watches\index.html">Watches</a></small>
+                    <small><a href="/App-Archers_030/Electronic/index.html">Electronic Musical Instruments</a></small>
+                    <small><a href="/App-Archers_030/Caluclators/index.html">Calculators</a></small>
+                    <small><a href="/App-Archers_030/Printers/index.html">Label Printers & Others</a></small>
+                </div>
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main id="product-details">
+        <div class="container">
+            <div id="product-info">
+                <img id="product-image" src="" alt="Product Image">
+                <div id="product-text">
+                    <h1 id="product-name"></h1>
+                    <p id="product-description"></p>
+                    <p id="product-price"></p>
+                    <button id="click_to_buy">Click To Buy</button>
+                    <button id="Fav">Favourite</button>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div id="footer-one">
+                <small><a href="">Products</a></small>
+                <small><a href="">Customer Support</a></small>
+                <small><a href="">Warranty</a></small>
+                <small><a href="">Corporate</a></small>
+            </div>
+            <div id="footer-two">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-twitter fa-xl"></i>
+                <i class="fa-brands fa-youtube fa-xl"></i>
+            </div>
+            <div id="footer-three">
+                <small><a href="">Privacy Policy</a></small>
+                <small><a href="">Labour Compliance</a></small>
+                <small><a href="">Secretarial (redirect)</a></small>
+                <small><a href="">CSR Policy</a></small>
+                <small><a href="">Cookie Policy</a></small>
+                <small><a href="">Terms of Use</a></small>
+                <small><a href="">Sitemap</a></small>
+                <small><a href="">Contact Us</a></small>
+                <small><a href="">India</a></small>
+            </div>
+            <div id="footer-four">
+                <small><a href="">© 2024 Casio India Co., Pvt. Ltd.</a></small>
+            </div>
+            <div id="footer-five">
+                <small>Please help us recycle e-waste and plastic waste responsibly.</small>
+                <small>For more information or e-waste pick up, please call 1800 2022746 </small>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const data = {
+            products: [
     {
       id: "p1",
       series: "Privia",
@@ -7,7 +139,7 @@ const data = {
       price: "₹1,99,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTS/CT-S1BK/assets/CT-S1BK_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A premium digital piano with high-quality sound, a sleek design, and advanced features for professional musicians.",
     },
@@ -29,7 +161,7 @@ const data = {
       price: "₹45,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTS/CT-S200WE/assets/CT-S200WE_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "An entry-level digital piano with a compact design, a range of sounds, and easy-to-use features for beginners.",
     },
@@ -51,7 +183,7 @@ const data = {
       price: "₹8,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/S/SA/sa-8/sa-80/assets/sa-80-img01.png.transform/product-panel/image.png",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A compact and affordable keyboard with a variety of sounds and rhythms, ideal for home use and practice.",
     },
@@ -73,7 +205,7 @@ const data = {
       price: "₹2,59,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/P/PX/PXS/px-s7000bk/assets/px-s7000bk-main01.png.transform/product-panel/image.png",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A high-end digital grand piano offering an authentic grand piano experience with premium sound and features.",
     },
@@ -95,7 +227,7 @@ const data = {
       price: "₹12,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CD/CDP/cdp-s160rd/assets/CDP-S160RD.png.transform/main-visual-sp/image.png",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "An educational keyboard with light-up keys and built-in songs, designed to make learning piano engaging and effective.",
     },
@@ -117,7 +249,7 @@ const data = {
       price: "₹89,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTS/ct-s1000v/assets/ct-s1000v-main01.png.transform/product-panel/image.png",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A digital piano known for its high-quality sound, authentic feel, and durability, ideal for both practice and performance.",
     },
@@ -139,7 +271,7 @@ const data = {
       price: "₹35,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CD/CDP/cdp-s160bk/assets/CDP-S160BK_main04.png.transform/product-panel/image.png",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A compact and affordable digital piano with a variety of sounds, perfect for beginners and home practice.",
     },
@@ -161,7 +293,7 @@ const data = {
       price: "₹9,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CD/CDP/cdp-s110bk/assets/CDP-S110BK_main04.png.transform/product-panel/image.png",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A modern keyboard with a compact design and a range of sound options, great for home use and practice.",
     },
@@ -183,7 +315,7 @@ const data = {
       price: "₹1,59,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CD/CDP/cdp-s150bk/assets/CDP-S150BK_main01.png.transform/product-panel/image.png",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A digital piano with a realistic grand piano sound and feel, designed for both performance and practice.",
     },
@@ -206,7 +338,7 @@ const data = {
       price: "₹11,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTK/CTK-2550/assets/CTK-2550_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A versatile digital piano with a wide range of sounds and a compact design, suitable for various playing styles.",
     },
@@ -228,7 +360,7 @@ const data = {
       price: "₹1,35,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CD/CDP/cdp-s160rd/assets/CDP-S160RD.png.transform/main-visual-sp/image.png",
-      isFavourite:false,
+      isFavourite: true,
       description:
         "A versatile digital piano with a wide range of sounds and a compact design, suitable for various playing styles.",
     },
@@ -250,7 +382,7 @@ const data = {
       price: "₹38,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTK/CTK-240/assets/CTK-240_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A versatile digital piano with a wide range of sounds and a compact design, suitable for various playing styles.",
     },
@@ -272,7 +404,7 @@ const data = {
       price: "₹4,495",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/S/SA/SA7/SA-76/assets/SA-76_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A compact keyboard with a range of sounds and rhythms, ideal for beginners and home practice.",
     },
@@ -294,7 +426,7 @@ const data = {
       price: "₹1,77,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/S/SA/SA7/SA-76/assets/SA-76_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A premium digital piano with an elegant white finish, offering exceptional sound quality and advanced features.",
     },
@@ -316,7 +448,7 @@ const data = {
       price: "₹2,495",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/S/SA/SA4/SA-47/assets/SA-47_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A basic lighted keyboard with essential features for beginners, making learning piano engaging and accessible.",
     },
@@ -338,7 +470,7 @@ const data = {
       price: "₹5,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/S/SA/SA7/SA-77/assets/SA-77_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A sophisticated digital piano with a wide range of sounds and features, designed for musicians looking for versatility and quality.",
     },
@@ -360,7 +492,7 @@ const data = {
       price: "₹56,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTX/CT-X8000IN/assets/CT-X8000IN_F.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A versatile digital piano with a wide range of features and sounds, ideal for various playing styles and practice.",
     },
@@ -382,7 +514,7 @@ const data = {
       price: "₹11,495",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTX/CT-X9000IN/assets/CT-X9000IN_F.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A compact and powerful keyboard with a range of sounds and features, ideal for home use and practice.",
     },
@@ -415,7 +547,7 @@ const data = {
       price: "₹5,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/S/SA/SA7/SA-77/assets/SA-77_Seq1.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A versatile digital piano offering a range of sounds and features, suitable for various musical styles and advanced practice.",
     },
@@ -437,7 +569,7 @@ const data = {
       price: "₹56,995",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTX/CT-X8000IN/assets/CT-X8000IN_F.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A feature-rich digital piano with a wide array of sounds and functionality, designed for both home use and performance.",
     },
@@ -459,7 +591,7 @@ const data = {
       price: "₹11,495",
       image:
         "https://www.casio.com/content/dam/casio/product-info/locales/in/en/emi/product/C/CT/CTX/CT-X9000IN/assets/CT-X9000IN_F.jpg.transform/product-panel/image.jpg",
-      isFavourite: false,
+      isFavourite: true,
       description:
         "A powerful and compact keyboard with an extensive range of sounds and features, suitable for home practice and performance.",
     },
@@ -475,64 +607,29 @@ const data = {
         "A high-performance digital piano offering realistic sound and touch, designed for those seeking an authentic piano experience.",
     },
   ],
-};
-function displayProducts() {
-  const productContainer = document.getElementById('product-container');
-  productContainer.innerHTML = '';
+        };
 
-  // Accessing the products array from the data object
-  data.products.forEach(product => {
-    const productCard = document.createElement('div');
-    productCard.className = 'product-card';
+        function getProductById(id) {
+            return data.products.find(product => product.id === id);
+        }
 
-    // Create and set up the image
-    const productImage = document.createElement('img');
-    productImage.src = product.image;
-    productImage.alt = product.model;
+        function displayProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            const product = getProductById(productId);
 
-    // Create and set up the details container
-    const productDetails = document.createElement('div');
-    productDetails.className = 'details';
+            if (product) {
+                document.getElementById('product-image').src = product.image;
+                document.getElementById('product-name').textContent = product.model;
+                document.getElementById('product-description').textContent = product.description;
+                document.getElementById('product-price').textContent = product.price;
+            } else {
+                document.getElementById('product-info').innerHTML = '<p>Product not found.</p>';
+            }
+        }
 
-    const productName = document.createElement('h4');
-    productName.textContent = product.model;
+        window.onload = displayProductDetails;
+    </script>
+</body>
 
-    const productPrice = document.createElement('p');
-    productPrice.textContent = product.price;
-
-    productDetails.appendChild(productName);
-    productDetails.appendChild(productPrice)
-
-          // Create the favorite icon
-          const favoriteIcon = document.createElement('div');
-          favoriteIcon.className = 'favorite-icon';
-          favoriteIcon.innerHTML = product.isFavourite
-              ? `<i class="fa-solid fa-heart"></i>`
-              : `<i class="fa-regular fa-heart"></i>`;
-  
-          // Toggle favorite state on click
-          favoriteIcon.onclick = function(event) {
-              event.stopPropagation(); // Prevent the card click event from firing
-              const isCurrentlyFavorite = favoriteIcon.innerHTML.includes('fa-solid');
-              favoriteIcon.innerHTML = isCurrentlyFavorite
-                  ? `<i class="fa-regular fa-heart"></i>`
-                  : `<i class="fa-solid fa-heart"></i>`;
-              
-              // Update the product's favorite state in the data
-              product.isFavourite = !isCurrentlyFavorite;
-          };
-  
-          productCard.appendChild(productImage);
-          productCard.appendChild(productDetails);
-          productCard.appendChild(favoriteIcon);
-  
-          // Add click event to redirect to product.html with product ID
-          productCard.addEventListener('click', () => {
-              window.location.href = `product.html?id=${product.id}`;
-          });
-  
-          productContainer.appendChild(productCard);
-      });
-  }
-  
-  window.onload = displayProducts;
+</html>
