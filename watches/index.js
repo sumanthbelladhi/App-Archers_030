@@ -92,7 +92,7 @@ function showSlide1(index1) {
 
 // Previous
 function prevSlide1() {
-    slideIndex1--; // Corrected from increment to decrement
+    slideIndex1--;
     showSlide1(slideIndex1);
 }
 
@@ -130,7 +130,7 @@ if (data && data.data && Array.isArray(data.data)) {
 
 function display(arr) {
     let container = document.getElementById("container");
-    container.innerHTML = ""; // Clear the container before adding new elements
+    container.innerHTML = "";
 
     arr.forEach((ele, i) => {
         let card = document.createElement("div");
