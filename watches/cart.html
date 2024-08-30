@@ -12,30 +12,12 @@
     <link rel="shortcut icon" href="./Watches Images/Masio Fevicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c70722c963.js" crossorigin="anonymous"></script>
-    <style>
-        .sort {
-            position: sticky;
-            top: 0;
-            z-index: 1;
-            background-color: rgb(0, 0, 83);
-            padding: 10px;
-            color: white;
-            margin-block: 20px;
-            align-self: center;
-        }
-        
-        select {
-            border-radius: 10px;
-            padding: 10px;
-        }
-    </style>
 </head>
 
 
 
 
 <body>
-    <!-- //Navbar -->
     <nav>
         <div id="top-nav">
             <div class="container">
@@ -92,13 +74,8 @@
     <!-- // -->
 
     <main id="content">
-        <div class="sort">
-            <select name="pets" id="sort">
-                        <option value="">Please choose to sort</option>
-                        <option value="asc">Low-High</option>
-                        <option value="desc">High-Low</option>
-            </select>
-        </div>
+        <h1 style="margin-left: 40px;">Favourites</h1>
+
         <div id="container">
 
         </div>
@@ -106,7 +83,6 @@
 
 
 
-    <!-- //footer -->
     <footer>
         <div class="container">
             <div id="footer-one">
@@ -141,11 +117,70 @@
             </div>
         </div>
     </footer>
-    <!-- //footer End -->
 
-
-    <script type="module" src="./fetch.js"></script>
-    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
+<script>
+    var cart = localStorage.getItem("cart");
+    cart = cart ? JSON.parse(cart) : [];
+
+    function display(arr) {
+        let container = document.getElementById("container");
+        container.innerHTML = "";
+
+        arr.forEach((ele, i) => {
+            let card = document.createElement("div");
+            card.setAttribute("id", "card");
+
+            let New = document.createElement("div");
+            New.className = "badge-new";
+            New.innerText = "NEW";
+
+            let favorite = document.createElement("div");
+            favorite.className = "favorite-icon";
+
+            // Check if the item is already in the cart
+            let isInCart = cart.some(e => e.id === ele.id); // This line should work fine now
+            favorite.innerHTML = isInCart ? `<i class="fa-regular fa-circle-xmark"></i>` : `<i class="fa-regular fa-heart" id="add"></i>`;
+
+            favorite.onclick = function() {
+                if (!isInCart) {
+                    favorite.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
+                    cart.push(ele);
+                    isInCart = true;
+                } else {
+                    favorite.innerHTML = `<i class="fa-regular fa-heart" id="add"></i>`;
+                    cart = cart.filter(e => e.id !== ele.id);
+                    isInCart = false;
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                display(cart)
+            }
+
+            let img = document.createElement("img");
+            img.src = ele.product.path;
+
+            img.onclick = function() {
+                window.location.href = `./pageinfo.html?id=${ele.id}`;
+            }
+
+            let brand = document.createElement("p");
+            brand.innerText = "G-SHOCK";
+
+            let title = document.createElement("h2");
+            title.innerText = ele.title;
+
+            let MRP = document.createElement("small");
+            MRP.classList.add("mrp");
+            MRP.innerText = "MRP";
+
+            let price = document.createElement("small");
+            price.innerText = ele.prices;
+
+            card.append(New, favorite, img, brand, title, MRP, price);
+            container.append(card);
+        });
+    }
+    display(cart)
+</script>

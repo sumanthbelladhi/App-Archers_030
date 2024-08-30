@@ -1,6 +1,29 @@
 import data from './fetch.js';
+//cart
+
+document.getElementById("cart").onclick = function() {
+    this.style.cursor = "pointer";
+    window.location.href = "./cart.html"
+}
+
+//search
+
+let searchInput = document.getElementsByClassName("search-input")[0];
+
+searchInput.onclick = function(event) {
+    this.style.width = "300px";
+    document.getElementById("links").style.display = "none";
+    event.stopPropagation();
+};
+
+document.onclick = function() {
+    searchInput.style.width = "initial";
+    document.getElementById("links").style.display = "block";
+};
+
 console.log(data);
 var flattenedArray;
+var favData = [];
 if (data && data.data && Array.isArray(data.data)) {
     const detailedproducts = data.data;
     console.log(detailedproducts);
@@ -8,6 +31,9 @@ if (data && data.data && Array.isArray(data.data)) {
         if (product.productAssetList && product.productAssetList.path) {
             product.productAssetList.path = baseUrl + product.productAssets.path;
         }
+
+        favData.push({ "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice });
+
         return { "product": product.productAssetList, "id": product.index, "title": product.productName, "price": product.dispPrice };
     });
     console.log(updateddetailedProducts);
@@ -27,6 +53,7 @@ result.forEach(ele => {
     title = ele.title;
     dispPrice = ele.price;
 })
+favData = favData.filter(ele => ele.id === id)
 
 let h = document.createElement("h1");
 h.textContent = title;
@@ -38,6 +65,23 @@ let btn1 = document.createElement("button")
 btn1.innerText = "Click To Buy"
 let btn2 = document.createElement("button")
 btn2.innerText = "Favourite"
+
+btn2.onclick = function() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    favData[0].product.path = "https://www.casio.com" + favData[0].product.path;
+    if (!cart.some(item => item.id === id)) {
+        cart.push(favData[0]);
+        localStorage.setItem("cart", JSON.stringify(cart));
+    } else {
+        alert("This item is already in your favorites.")
+    }
+    this.style.backgroundColor = "Black";
+    this.style.color = "white";
+    console.log('Button clicked, style changed');
+
+}
+
+
 let p1 = document.createElement("p")
 p1.innerText = "Soak up the sparkle and shine of life at a summer beach resort with an all-white shimmery G-SHOCK."
 let p2 = document.createElement("p")

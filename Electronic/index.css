@@ -1,15 +1,30 @@
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
 body {
     font-family: Helvetica, sans-serif;
-    margin: 0; /* Ensure no margin around the body */
-    padding: 0; /* Ensure no padding around the body */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    /* Ensure no margin around the body */
+    padding: 0;
+    /* Ensure no padding around the body */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+.search-input {
+    width: initial;
+    transition: width 0.3s ease-in-out;
+}
+
+#links {
+    transition: display 0.3s ease-in-out;
 }
 
 .container {
     max-width: 1330px;
     margin: auto;
-    
 }
 
 #top-nav {
@@ -18,7 +33,8 @@ body {
 
 #top-nav .container {
     display: flex;
-    justify-content: flex-end; /* Align items to the end */
+    justify-content: flex-end;
+    /* Align items to the end */
     gap: 20px;
     padding: 5px;
 }
@@ -34,7 +50,8 @@ small a:hover {
 }
 
 #nav {
-    margin: 1em 2em 0.1em 5em; /* Adjust margins as needed */
+    margin: 1em 2em 0.1em 5em;
+    /* Adjust margins as needed */
 }
 
 #nav .container {
@@ -125,60 +142,70 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    /* Full viewport height */
     margin: 0;
     padding: 0;
 }
 
 #main_image {
-    width: 100vw;        /* Full viewport width */
-    height: 100vh;       /* Full viewport height */
-    object-fit: cover;   /* Cover the viewport, maintaining aspect ratio */
-    display: block;      /* Remove bottom space/gap */
-    margin: 0;           /* Remove any margin */
-    padding: 0;          /* Remove any padding */
+    width: 100vw;
+    /* Full viewport width */
+    height: 100vh;
+    /* Full viewport height */
+    object-fit: cover;
+    /* Cover the viewport, maintaining aspect ratio */
+    display: block;
+    /* Remove bottom space/gap */
+    margin: 0;
+    /* Remove any margin */
+    padding: 0;
+    /* Remove any padding */
 }
+
 #below-nav {
     background-color: rgb(244, 245, 249);
     padding: 20px;
-    
 }
 
 #below-nav .container {
     display: flex;
-    justify-content: space-between; /* Pushes the h3 to the left and the a tags to the right */
-    align-items: center; /* Vertically center align items */
-    
+    justify-content: space-between;
+    /* Pushes the h3 to the left and the a tags to the right */
+    align-items: center;
+    /* Vertically center align items */
 }
 
 #below-nav h3 {
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    /* Remove default margin */
     font-size: 20px;
     font-weight: bold;
     color: black;
-    
 }
 
 #below-nav a {
     text-decoration: none;
     color: black;
     font-weight: 530;
-    margin-left: 20px; /* Adds space between the a tags */
+    margin-left: 20px;
+    /* Adds space between the a tags */
 }
 
 #below-nav a:hover {
     text-decoration: underline;
 }
 
-
 #below-nav a:hover {
     cursor: pointer;
 }
-section{
+
+section {
     max-width: 1330px;
     margin: auto;
     background-color: white;
 }
+
 .product-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -195,11 +222,13 @@ section{
     display: flex;
     flex-direction: column;
     cursor: pointer;
+
     
     background-color: rgb(225, 229, 237);
+
 }
 
-.product-card:hover{
+.product-card:hover {
     border: 0.001px solid black;
 }
 
@@ -210,7 +239,8 @@ section{
     margin-bottom: 15px;
     transition: all 0.2s ease-in-out;
 }
-.product-card img:hover{
+
+.product-card img:hover {
     scale: 1.05;
 }
 
@@ -228,6 +258,7 @@ section{
 .product-details p {
     margin-top: 20px;
     font-size: .5em;
+
 }
 
 @media (max-width: 768px) {
@@ -248,4 +279,5 @@ section{
     cursor: pointer;
     z-index: 1;
 }
+
 
