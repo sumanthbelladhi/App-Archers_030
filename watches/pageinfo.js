@@ -72,6 +72,8 @@ btn2.onclick = function() {
     if (!cart.some(item => item.id === id)) {
         cart.push(favData[0]);
         localStorage.setItem("cart", JSON.stringify(cart));
+    } else {
+        alert("This item is already in your favorites.")
     }
     this.style.backgroundColor = "Black";
     this.style.color = "white";

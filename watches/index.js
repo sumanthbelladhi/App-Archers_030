@@ -123,6 +123,17 @@ if (data && data.data && Array.isArray(data.data)) {
     console.log(flattenedArray);
     cart = localStorage.getItem("cart");
     cart = cart ? JSON.parse(cart) : [];
+    let sort = document.getElementById("sort");
+    sort.addEventListener("change", function() {
+        let val = sort.value;
+        if (val === "desc") {
+            flattenedArray.sort((a, b) => b.prices - a.prices);
+        } else if (val === "asc") {
+            flattenedArray.sort((a, b) => a.prices - b.prices);
+        }
+        display(flattenedArray);
+    });
+
     display(flattenedArray)
 }
 
