@@ -1,123 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
 body {
-    font-family: Helvetica, sans-serif;
-    margin: auto;
+  font-family: Helvetica, sans-serif;
+  margin: auto;
 }
 
 .container {
-    max-width: 1330px;
-    margin: auto;
+  max-width: 1330px;
+  margin: auto;
 }
 
 #top-nav {
-    background-color: rgb(244, 245, 249);
+  background-color: rgb(244, 245, 249);
 }
 
 #top-nav .container {
-    display: flex;
-    justify-content: end;
-    gap: 20px;
-    padding: 5px;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  padding: 5px;
 }
 
 small a {
-    text-decoration: none;
-    color: black;
-    font-weight: 530;
+  text-decoration: none;
+  color: black;
+  font-weight: 530;
 }
 
 small a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #nav {
-    margin: 1em 2em 0.1em 5em;
+  margin: 1em 2em 0.1em 5em;
 }
 
 #nav .container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav h1 {
-    font-family: "Teko", sans-serif;
-    font-weight: 700;
-    font-size: 35px;
-    letter-spacing: 0.0001px;
-    color: #003087;
-    margin: 0;
-    padding: 0;
+  font-family: "Teko", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: 0.0001px;
+  color: #003087;
+  margin: 0;
+  padding: 0;
 }
 
 #nav .container div {
-    display: flex;
-    gap: 20px;
-    text-align: center;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
 }
 
 .search-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .search-input {
-    padding: 10px 10px 10px 20px;
-    width: 200px;
-    height: 20px;
-    border: none;
-    border-bottom: 1px solid black;
-    align-self: center;
+  padding: 10px 10px 10px 20px;
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  align-self: center;
 }
 
 .search-icon {
-    position: absolute;
-    top: 50%;
-    left: 2px;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #999;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
 }
 
 footer {
-    background-color: rgb(244, 245, 249);
-    padding: 2em 0em;
+  background-color: rgb(244, 245, 249);
+  padding: 2em 0em;
 }
 
 #footer-one {
-    display: flex;
-    justify-content: center;
-    gap: 4em;
-    margin: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  margin: 2em;
 }
 
 #footer-one a {
-    color: rgb(138, 138, 138);
+  color: rgb(138, 138, 138);
 }
 
 #footer-two {
-    display: flex;
-    gap: 2em;
-    cursor: pointer;
-    margin: 2em;
+  display: flex;
+  gap: 2em;
+  cursor: pointer;
+  margin: 2em;
 }
 
 #footer-three,
 #footer-four {
-    font-size: 0.9em;
-    margin: 0.4em 2em;
+  font-size: 0.9em;
+  margin: 0.4em 2em;
 }
 
 #footer-three {
-    display: flex;
-    gap: 3em;
+  display: flex;
+  gap: 3em;
 }
 
 #footer-five small {
-    margin: 0.9em 0px;
-    display: block;
-    font-weight: 600;
+  margin: 0.9em 0px;
+  display: block;
+  font-weight: 600;
 }
-
 
 /* Main
 
@@ -149,7 +148,7 @@ img.displaySlide {
     color: hsl(0, 0%, 0%);
     cursor: pointer;
     /* border-radius: 50%; */
-    /* padding: 4px 8px;
+/* padding: 4px 8px;
     border: none;
 } */
 /* 
@@ -169,11 +168,9 @@ img.displaySlide {
         opacity: 1;
     }
 }
- */ 
+ */
 
 /* Main End */
-
-
 
 /* 2 carousel start */
 
@@ -207,7 +204,7 @@ img.displaySlide1 {
     color: hsl(0, 0%, 0%);
     cursor: pointer;
     /* border-radius: 50%; */
-    /* padding: 4px 8px;
+/* padding: 4px 8px;
     border: none;
 } */
 
@@ -226,217 +223,208 @@ img.displaySlide1 {
     to {
         opacity: 1;
     }
-} */ 
-
+} */
 
 /* 2 carousel End */
 
 /* Updated CSS for second carousel with sliding effect */
 
 .slider1 {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slider1 .slides1 {
-    display: flex; /* Use flexbox to align images in a row */
-    width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+  display: flex; /* Use flexbox to align images in a row */
+  width: 100%;
+  transition: transform 1s ease-in-out; /* Smooth sliding effect */
 }
 
 .slider1 img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+  width: 100%;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .slider1 button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    background-color: transparent;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
-    padding: 4px 8px;
-    border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
 }
 
 .Previous2 {
-    left: 0;
+  left: 0;
 }
 
 .Next2 {
-    right: 0;
+  right: 0;
 }
-
 
 /* //Second Carousel */
 
 .slider2 {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slider2 .slides2 {
-    display: flex; /* Use flexbox to align images in a row */
-    width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+  display: flex; /* Use flexbox to align images in a row */
+  width: 100%;
+  transition: transform 1s ease-in-out; /* Smooth sliding effect */
 }
 
 .slider2 img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+  width: 100%;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .slider2 button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    background-color: transparent;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
-    padding: 4px 8px;
-    border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
 }
 
 .Previous1 {
-    left: 0;
+  left: 0;
 }
 
 .Next1 {
-    right: 0;
+  right: 0;
 }
-
-
 
 /* //Third Carousel */
 
 .slider3 {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slider3 .slides3 {
-    display: flex; /* Use flexbox to align images in a row */
-    width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+  display: flex; /* Use flexbox to align images in a row */
+  width: 100%;
+  transition: transform 1s ease-in-out; /* Smooth sliding effect */
 }
 
 .slider3 img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+  width: 100%;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .slider3 button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    background-color: transparent;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
-    padding: 4px 8px;
-    border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
 }
 
 .Previous3 {
-    left: 0;
+  left: 0;
 }
 
 .Next3 {
-    right: 0;
+  right: 0;
 }
-
 
 /*4th Carousel  */
 
-
 .slider4 {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slider4 img {
-    width: 100%;
-    height: auto;
-    display: none;
+  width: 100%;
+  height: auto;
+  display: none;
 }
 
 img.displaySlide4 {
-    display: block;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 .slider4 button {
-    position: absolute;
-    top: 46%;
-    transform: translate(-1%);
-    font-size: 1.8rem;
-    background-color: transparent;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
-    /* border-radius: 50%; */
-    padding: 4px 8px;
-    border: none;
+  position: absolute;
+  top: 46%;
+  transform: translate(-1%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  /* border-radius: 50%; */
+  padding: 4px 8px;
+  border: none;
 }
 
 .Previous4 {
-    left: 0px;
+  left: 0px;
 }
 
 .Next4 {
-    right: 0px;
+  right: 0px;
 }
 
 @keyframes fade {
-    from {
-        opacity: .5
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /* 5th image */
 .slider5 {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slider5 img {
-    width: 100%;
-    height: auto;
-    /* display: none; */
+  width: 100%;
+  height: auto;
+  /* display: none; */
 }
-
-
 
 /* 6th image */
 
 .slider6 {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slider6 img {
-    width: 100%;
-    height: auto;
-    /* display: none; */
+  width: 100%;
+  height: auto;
+  /* display: none; */
 }
-
