@@ -4,6 +4,10 @@ body {
     margin: auto;
 }
 
+#nav h1 {
+    cursor: pointer;
+}
+
 .container {
     max-width: 1330px;
     margin: auto;
@@ -149,9 +153,13 @@ img.displaySlide {
     color: hsl(0, 0%, 0%);
     cursor: pointer;
     /* border-radius: 50%; */
-    /* padding: 4px 8px;
+
+
+/* padding: 4px 8px;
     border: none;
 } */
+
+
 /* 
 .Previous {
     left: 0px;
@@ -169,13 +177,14 @@ img.displaySlide {
         opacity: 1;
     }
 }
- */ 
+ */
+
 
 /* Main End */
 
 
-
 /* 2 carousel start */
+
 
 /* .slider1 {
     position: relative;
@@ -207,9 +216,12 @@ img.displaySlide1 {
     color: hsl(0, 0%, 0%);
     cursor: pointer;
     /* border-radius: 50%; */
-    /* padding: 4px 8px;
+
+
+/* padding: 4px 8px;
     border: none;
 } */
+
 
 /* .Previous2 {
     left: 0px;
@@ -226,10 +238,11 @@ img.displaySlide1 {
     to {
         opacity: 1;
     }
-} */ 
+} */
 
 
 /* 2 carousel End */
+
 
 /* Updated CSS for second carousel with sliding effect */
 
@@ -241,15 +254,18 @@ img.displaySlide1 {
 }
 
 .slider1 .slides1 {
-    display: flex; /* Use flexbox to align images in a row */
+    display: flex;
+    /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding effect */
 }
 
 .slider1 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
 }
 
 .slider1 button {
@@ -283,15 +299,18 @@ img.displaySlide1 {
 }
 
 .slider2 .slides2 {
-    display: flex; /* Use flexbox to align images in a row */
+    display: flex;
+    /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding effect */
 }
 
 .slider2 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
 }
 
 .slider2 button {
@@ -315,7 +334,6 @@ img.displaySlide1 {
 }
 
 
-
 /* //Third Carousel */
 
 .slider3 {
@@ -326,15 +344,18 @@ img.displaySlide1 {
 }
 
 .slider3 .slides3 {
-    display: flex; /* Use flexbox to align images in a row */
+    display: flex;
+    /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding effect */
 }
 
 .slider3 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
 }
 
 .slider3 button {
@@ -359,7 +380,6 @@ img.displaySlide1 {
 
 
 /*4th Carousel  */
-
 
 .slider4 {
     position: relative;
@@ -409,7 +429,10 @@ img.displaySlide4 {
         opacity: 1;
     }
 }
+
+
 /* 5th image */
+
 .slider5 {
     position: relative;
     width: 100%;
@@ -422,7 +445,6 @@ img.displaySlide4 {
     height: auto;
     /* display: none; */
 }
-
 
 
 /* 6th image */
@@ -439,4 +461,3 @@ img.displaySlide4 {
     height: auto;
     /* display: none; */
 }
-
