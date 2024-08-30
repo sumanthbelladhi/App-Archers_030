@@ -4,10 +4,6 @@ body {
     margin: auto;
 }
 
-#nav h1 {
-    cursor: pointer;
-}
-
 .container {
     max-width: 1330px;
     margin: auto;
@@ -82,170 +78,6 @@ small a:hover {
     color: #999;
 }
 
-footer {
-    background-color: rgb(244, 245, 249);
-    padding: 2em 0em;
-}
-
-#footer-one {
-    display: flex;
-    justify-content: center;
-    gap: 4em;
-    margin: 2em;
-}
-
-#footer-one a {
-    color: rgb(138, 138, 138);
-}
-
-#footer-two {
-    display: flex;
-    gap: 2em;
-    cursor: pointer;
-    margin: 2em;
-}
-
-#footer-three,
-#footer-four {
-    font-size: 0.9em;
-    margin: 0.4em 2em;
-}
-
-#footer-three {
-    display: flex;
-    gap: 3em;
-}
-
-#footer-five small {
-    margin: 0.9em 0px;
-    display: block;
-    font-weight: 600;
-}
-
-
-/* Main
-
-.slider {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-    display: none;
-}
-
-img.displaySlide {
-    display: block;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.slider button {
-    position: absolute;
-    top: 46%;
-    transform: translate(-1%);
-    font-size: 1.8rem;
-    background-color: transparent;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
-    /* border-radius: 50%; */
-
-
-/* padding: 4px 8px;
-    border: none;
-} */
-
-
-/* 
-.Previous {
-    left: 0px;
-}
-
-.Next {
-    right: 0;
-}
-
-@keyframes fade {
-    from {
-        opacity: .5
-    }
-    to {
-        opacity: 1;
-    }
-}
- */
-
-
-/* Main End */
-
-
-/* 2 carousel start */
-
-
-/* .slider1 {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slider1 img {
-    width: 100%;
-    height: auto;
-    display: none;
-    left: 100%;
-    transition: left 0.5s ease-in-out;
-}
-
-img.displaySlide1 {
-    display: block;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.slider1 button {
-    position: absolute;
-    top: 46%;
-    transform: translate(-1%);
-    font-size: 1.8rem;
-    background-color: transparent;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
-    /* border-radius: 50%; */
-
-
-/* padding: 4px 8px;
-    border: none;
-} */
-
-
-/* .Previous2 {
-    left: 0px;
-}
-
-.Next2 {
-    right: 0px;
-}
-
-@keyframes fade {
-    from {
-        opacity: .5
-    }
-    to {
-        opacity: 1;
-    }
-} */
-
-
-/* 2 carousel End */
-
-
-/* Updated CSS for second carousel with sliding effect */
-
 .slider1 {
     position: relative;
     width: 100%;
@@ -254,18 +86,15 @@ img.displaySlide1 {
 }
 
 .slider1 .slides1 {
-    display: flex;
-    /* Use flexbox to align images in a row */
+    display: flex; /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out;
-    /* Smooth sliding effect */
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
 }
 
 .slider1 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0;
-    /* Prevent images from shrinking */
+    flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .slider1 button {
@@ -299,18 +128,15 @@ img.displaySlide1 {
 }
 
 .slider2 .slides2 {
-    display: flex;
-    /* Use flexbox to align images in a row */
+    display: flex; /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out;
-    /* Smooth sliding effect */
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
 }
 
 .slider2 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0;
-    /* Prevent images from shrinking */
+    flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .slider2 button {
@@ -334,6 +160,7 @@ img.displaySlide1 {
 }
 
 
+
 /* //Third Carousel */
 
 .slider3 {
@@ -344,18 +171,15 @@ img.displaySlide1 {
 }
 
 .slider3 .slides3 {
-    display: flex;
-    /* Use flexbox to align images in a row */
+    display: flex; /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out;
-    /* Smooth sliding effect */
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
 }
 
 .slider3 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0;
-    /* Prevent images from shrinking */
+    flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 .slider3 button {
@@ -380,6 +204,7 @@ img.displaySlide1 {
 
 
 /*4th Carousel  */
+
 
 .slider4 {
     position: relative;
@@ -429,10 +254,7 @@ img.displaySlide4 {
         opacity: 1;
     }
 }
-
-
 /* 5th image */
-
 .slider5 {
     position: relative;
     width: 100%;
@@ -445,6 +267,7 @@ img.displaySlide4 {
     height: auto;
     /* display: none; */
 }
+
 
 
 /* 6th image */
@@ -461,3 +284,157 @@ img.displaySlide4 {
     height: auto;
     /* display: none; */
 }
+
+
+/* ///TOPICS CSS START */
+
+
+.topics {
+    max-width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+#topi{
+  padding-left: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+.card-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+}
+
+.card {
+    position: relative;
+    width: calc(20% - 20px); 
+    overflow: hidden;
+    cursor: pointer;
+    /* border-radius: 10px; */
+    
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    
+}
+
+.card img:hover {
+    transform: scale(1.09); 
+    
+}
+
+.shockTeam {
+    font-size: 12px;
+    padding: 12px 15px 0px 12px;
+    font-weight: 600;
+}
+
+.shockTeam1 {
+    font-size: 10px;
+    padding: 0px 14px;
+}
+.card {
+    text-decoration: none;
+    color: inherit; 
+    display: block;
+    position: relative;
+    width: calc(20% - 20px);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card img:hover {
+    transform: scale(1.09); /* Scale effect on hover */
+}
+
+
+@media (max-width: 1200px) {
+    .card {
+        width: calc(25% - 20px); /* 4 cards in a row */
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: calc(33.33% - 20px); /* 3 cards in a row */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards in a row */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(100% - 20px); /* 1 card in a row */
+    }
+}
+
+
+footer {
+    background-color: rgb(244, 245, 249);
+    padding: 2em 0em;
+}
+
+/* TOPIC CSS END */
+
+
+/* FOOTER START */
+
+#footer-one {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin: 2em;
+}
+
+#footer-one a {
+    color: rgb(138, 138, 138);
+}
+
+#footer-two {
+    display: flex;
+    gap: 2em;
+    cursor: pointer;
+    margin: 2em;
+}
+
+#footer-three,
+#footer-four {
+    font-size: 0.9em;
+    margin: 0.4em 2em;
+}
+
+#footer-three {
+    display: flex;
+    gap: 3em;
+}
+
+#footer-five small {
+    margin: 0.9em 0px;
+    display: block;
+    font-weight: 600;
+}
+
+
+/* FOOTER END */
