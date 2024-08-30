@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", initializeSlider2);
 function initializeSlider2() {
     if (slides2.length > 0) {
         updateSlidePosition2();
-        interValid2 = setInterval(nextSlide2, 4000);
+        interValid2 = setInterval(nextSlide2, 3000);
     }
 }
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", initializeSlider3);
 function initializeSlider3() {
     if (slides3.length > 0) {
         updateSlidePosition3();
-        interValid3 = setInterval(nextSlide3, 5000);
+        interValid3 = setInterval(nextSlide3, 3000);
     }
 }
 
