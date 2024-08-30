@@ -78,6 +78,51 @@ small a:hover {
     color: #999;
 }
 
+
+footer {
+    background-color: rgb(244, 245, 249);
+    padding: 2em 0em;
+    margin-block: 20px;
+}
+
+#footer-one {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin: 2em;
+}
+
+#footer-one a {
+    color: rgb(138, 138, 138);
+}
+
+#footer-two {
+    display: flex;
+    gap: 2em;
+    cursor: pointer;
+    margin: 2em;
+}
+
+#footer-three,
+#footer-four {
+    font-size: 0.9em;
+    margin: 0.4em 2em;
+}
+
+#footer-three {
+    display: flex;
+    gap: 3em;
+}
+
+#footer-five small {
+    margin: 0.9em 0px;
+    display: block;
+    font-weight: 600;
+}
+
+
+
+
 .slider1 {
     position: relative;
     width: 100%;
@@ -286,7 +331,6 @@ img.displaySlide4 {
 }
 
 
-/* ///TOPICS CSS START */
 
 
 .topics {
@@ -438,3 +482,106 @@ footer {
 
 
 /* FOOTER END */
+=======
+/* New Drop*/
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-block: 30px;
+}
+
+@media (max-width: 900px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#card {
+    background-color: white;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#card:hover {
+    border: 0.001px solid black;
+}
+
+#card img {
+    max-width: 100%;
+    padding: 0px;
+    height: auto;
+    margin-bottom: 15px;
+    background-color: rgb(247, 248, 250);
+    transition: all 0.2s ease-in-out;
+}
+
+#card img:hover {
+    scale: 1.05;
+}
+
+.mrp {
+    margin-top: 20px;
+    font-size: .5em;
+}
+
+#card h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#card p {
+    font-size: 14px;
+    color: black;
+    margin: 5px 0;
+}
+
+.badge-new {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#btn-newdrops {
+    display: block;
+    margin: auto;
+    padding: 15px 35px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+#btn-newdrops:hover {
+    opacity: 0.5;
+}

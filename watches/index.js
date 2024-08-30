@@ -92,7 +92,7 @@ function showSlide1(index1) {
 
 // Previous
 function prevSlide1() {
-    slideIndex1--; // Corrected from increment to decrement
+    slideIndex1--;
     showSlide1(slideIndex1);
 }
 
@@ -116,13 +116,24 @@ if (data && data.data && Array.isArray(data.data)) {
         if (product.productAssets && product.productAssets.path) {
             product.productAssets.path = baseUrl + product.productAssets.path;
         }
-        return { "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice };
+        return { "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice, "p": product.listPrice };
     });
     console.log(products);
     const flattenedArray = updatedProducts.flat(Infinity);
     console.log(flattenedArray);
     cart = localStorage.getItem("cart");
     cart = cart ? JSON.parse(cart) : [];
+    let sort = document.getElementById("sort");
+    sort.addEventListener("change", function() {
+        let val = sort.value;
+        if (val === "desc") {
+            flattenedArray.sort((a, b) => b.p - a.p);
+        } else if (val === "asc") {
+            flattenedArray.sort((a, b) => a.p - b.p);
+        }
+        display(flattenedArray);
+    });
+
     display(flattenedArray)
 }
 
@@ -130,7 +141,7 @@ if (data && data.data && Array.isArray(data.data)) {
 
 function display(arr) {
     let container = document.getElementById("container");
-    container.innerHTML = ""; // Clear the container before adding new elements
+    container.innerHTML = "";
 
     arr.forEach((ele, i) => {
         let card = document.createElement("div");

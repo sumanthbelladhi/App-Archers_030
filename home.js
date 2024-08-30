@@ -1,5 +1,12 @@
-
 // JavaScript for the second carousel with sliding effect
+
+//favourite
+
+document.getElementById("cart").onclick = function() {
+    this.style.cursor = "pointer";
+    window.location.href = "./watches/cart.html"
+}
+
 
 const slides1 = document.querySelectorAll(".slides1 img");
 const slidesContainer1 = document.querySelector(".slides1");
@@ -23,7 +30,7 @@ function updateSlidePosition1() {
 function prevSlide1() {
     slideIndex1--;
     if (slideIndex1 < 0) {
-        slideIndex1 = slides1.length-1;
+        slideIndex1 = slides1.length - 1;
     }
     updateSlidePosition1();
 }
@@ -32,7 +39,7 @@ function prevSlide1() {
 function nextSlide1() {
     slideIndex1++;
     if (slideIndex1 >= slides1.length) {
-        slideIndex1 = 0; 
+        slideIndex1 = 0;
     }
     updateSlidePosition1();
 }
@@ -62,7 +69,7 @@ function updateSlidePosition2() {
 function prevSlide2() {
     slideIndex2--;
     if (slideIndex2 < 0) {
-        slideIndex2 = slides2.length-1;
+        slideIndex2 = slides2.length - 1;
     }
     updateSlidePosition2();
 }
@@ -71,7 +78,7 @@ function prevSlide2() {
 function nextSlide2() {
     slideIndex2++;
     if (slideIndex2 >= slides2.length) {
-        slideIndex2 = 0; 
+        slideIndex2 = 0;
     }
     updateSlidePosition2();
 }
@@ -102,7 +109,7 @@ function updateSlidePosition3() {
 function prevSlide3() {
     slideIndex3--;
     if (slideIndex3 < 0) {
-        slideIndex3 = slides3.length-1; 
+        slideIndex3 = slides3.length - 1;
     }
     updateSlidePosition3();
 }
@@ -127,7 +134,7 @@ document.addEventListener("DOMContentLoaded", initializeSlider4);
 function initializeSlider4() {
     if (slides4.length > 0) {
         slides4[slideIndex4].classList.add("displaySlide4");
-        interValid4 = setInterval(nextSlide4, 3000); 
+        interValid4 = setInterval(nextSlide4, 3000);
     }
 }
 
@@ -145,13 +152,96 @@ function showSlide4(index4) {
 }
 
 // Previous
-function prevSlide1() {
-    slideIndex4--; 
-    showSlide4(slideIndex4);
-}
+
+
+
 
 // Next
 function nextSlide4() {
     slideIndex4++;
     showSlide4(slideIndex4);
 }
+
+//New drops
+import data from './watches/fetch.js';
+var cart;
+const baseUrl = "https://www.casio.com";
+
+if (data && data.data && Array.isArray(data.data)) {
+    const products = data.data.slice(0, 8);
+
+    const updatedProducts = products.map(product => {
+        if (product.productAssets && product.productAssets.path) {
+            product.productAssets.path = baseUrl + product.productAssets.path;
+        }
+        return { "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice };
+    });
+    console.log(products);
+    const flattenedArray = updatedProducts.flat(Infinity);
+    console.log(flattenedArray);
+    cart = localStorage.getItem("cart");
+    cart = cart ? JSON.parse(cart) : [];
+    display(flattenedArray)
+}
+
+
+
+function display(arr) {
+    let container = document.getElementById("container");
+    container.innerHTML = "";
+
+    arr.forEach((ele, i) => {
+        let card = document.createElement("div");
+        card.setAttribute("id", "card");
+
+        let New = document.createElement("div");
+        New.className = "badge-new";
+        New.innerText = "NEW";
+
+        let favorite = document.createElement("div");
+        favorite.className = "favorite-icon";
+
+        let isInCart = cart.some(e => e.id === ele.id);
+        favorite.innerHTML = isInCart ? `<i class="fa-regular fa-circle-xmark"></i>` : `<i class="fa-regular fa-heart" id="add"></i>`;
+
+        favorite.onclick = function() {
+            if (!isInCart) {
+                favorite.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
+                cart.push(ele);
+                isInCart = true;
+            } else {
+                favorite.innerHTML = `<i class="fa-regular fa-heart" id="add"></i>`;
+                cart = cart.filter(e => e.id !== ele.id);
+                isInCart = false;
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        let img = document.createElement("img");
+        img.src = ele.product.path;
+
+        img.onclick = function() {
+            window.location.href = `./watches/pageinfo.html?id=${ele.id}`;
+        }
+
+        let brand = document.createElement("p");
+        brand.innerText = "G-SHOCK";
+
+        let title = document.createElement("h2");
+        title.innerText = ele.title;
+
+        let MRP = document.createElement("small");
+        MRP.classList.add("mrp");
+        MRP.innerText = "MRP";
+
+        let price = document.createElement("small");
+        price.innerText = ele.prices;
+
+        card.append(New, favorite, img, brand, title, MRP, price);
+        container.append(card);
+    });
+}
+
+document.getElementById("btn-newdrops").onclick = function() {
+    window.location.href = "./watches/index.html";
+};
