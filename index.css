@@ -78,7 +78,6 @@ small a:hover {
     color: #999;
 }
 
-
 footer {
     background-color: rgb(244, 245, 249);
     padding: 2em 0em;
@@ -120,9 +119,6 @@ footer {
     font-weight: 600;
 }
 
-
-
-
 .slider1 {
     position: relative;
     width: 100%;
@@ -131,15 +127,18 @@ footer {
 }
 
 .slider1 .slides1 {
-    display: flex; /* Use flexbox to align images in a row */
+    display: flex;
+    /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding effect */
 }
 
 .slider1 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
 }
 
 .slider1 button {
@@ -173,15 +172,18 @@ footer {
 }
 
 .slider2 .slides2 {
-    display: flex; /* Use flexbox to align images in a row */
+    display: flex;
+    /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding effect */
 }
 
 .slider2 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
 }
 
 .slider2 button {
@@ -205,7 +207,6 @@ footer {
 }
 
 
-
 /* //Third Carousel */
 
 .slider3 {
@@ -216,15 +217,18 @@ footer {
 }
 
 .slider3 .slides3 {
-    display: flex; /* Use flexbox to align images in a row */
+    display: flex;
+    /* Use flexbox to align images in a row */
     width: 100%;
-    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding effect */
 }
 
 .slider3 img {
     width: 100%;
     height: auto;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
 }
 
 .slider3 button {
@@ -249,7 +253,6 @@ footer {
 
 
 /*4th Carousel  */
-
 
 .slider4 {
     position: relative;
@@ -299,7 +302,10 @@ img.displaySlide4 {
         opacity: 1;
     }
 }
+
+
 /* 5th image */
+
 .slider5 {
     position: relative;
     width: 100%;
@@ -312,7 +318,6 @@ img.displaySlide4 {
     height: auto;
     /* display: none; */
 }
-
 
 
 /* 6th image */
@@ -330,37 +335,35 @@ img.displaySlide4 {
     /* display: none; */
 }
 
-
-
-
 .topics {
     max-width: 100%;
     padding: 20px;
     text-align: left;
 }
-#topi{
-  padding-left: 10px;
+
+#topi {
+    padding-left: 10px;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
 }
+
 .card-link {
-    text-decoration: none; 
-    color: inherit; 
-    display: block; 
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .card {
     position: relative;
-    width: calc(20% - 20px); 
+    width: calc(20% - 20px);
     overflow: hidden;
     cursor: pointer;
     /* border-radius: 10px; */
-    
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -369,12 +372,10 @@ img.displaySlide4 {
     height: auto;
     display: block;
     transition: transform 0.5s ease;
-    
 }
 
 .card img:hover {
-    transform: scale(1.09); 
-    
+    transform: scale(1.09);
 }
 
 .shockTeam {
@@ -387,9 +388,10 @@ img.displaySlide4 {
     font-size: 10px;
     padding: 0px 14px;
 }
+
 .card {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
     display: block;
     position: relative;
     width: calc(20% - 20px);
@@ -406,39 +408,43 @@ img.displaySlide4 {
 }
 
 .card img:hover {
-    transform: scale(1.09); /* Scale effect on hover */
+    transform: scale(1.09);
+    /* Scale effect on hover */
 }
-
 
 @media (max-width: 1200px) {
     .card {
-        width: calc(25% - 20px); /* 4 cards in a row */
+        width: calc(25% - 20px);
+        /* 4 cards in a row */
     }
 }
 
 @media (max-width: 992px) {
     .card {
-        width: calc(33.33% - 20px); /* 3 cards in a row */
+        width: calc(33.33% - 20px);
+        /* 3 cards in a row */
     }
 }
 
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 20px); /* 2 cards in a row */
+        width: calc(50% - 20px);
+        /* 2 cards in a row */
     }
 }
 
 @media (max-width: 576px) {
     .card {
-        width: calc(100% - 20px); /* 1 card in a row */
+        width: calc(100% - 20px);
+        /* 1 card in a row */
     }
 }
-
 
 footer {
     background-color: rgb(244, 245, 249);
     padding: 2em 0em;
 }
+
 
 /* TOPIC CSS END */
 
@@ -482,7 +488,8 @@ footer {
 
 
 /* FOOTER END */
-=======
+
+
 /* New Drop*/
 
 #container {
