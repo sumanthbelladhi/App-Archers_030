@@ -32,7 +32,7 @@ if (data && data.data && Array.isArray(data.data)) {
             product.productAssetList.path = baseUrl + product.productAssets.path;
         }
 
-        favData.push({ "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice });
+        favData.push({ "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice, "p": product.listPrice });
 
         return { "product": product.productAssetList, "id": product.index, "title": product.productName, "price": product.dispPrice };
     });

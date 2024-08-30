@@ -116,7 +116,7 @@ if (data && data.data && Array.isArray(data.data)) {
         if (product.productAssets && product.productAssets.path) {
             product.productAssets.path = baseUrl + product.productAssets.path;
         }
-        return { "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice };
+        return { "product": product.productAssets, "id": product.index, "title": product.productName, "prices": product.dispPrice, "p": product.listPrice };
     });
     console.log(products);
     const flattenedArray = updatedProducts.flat(Infinity);
@@ -127,9 +127,9 @@ if (data && data.data && Array.isArray(data.data)) {
     sort.addEventListener("change", function() {
         let val = sort.value;
         if (val === "desc") {
-            flattenedArray.sort((a, b) => b.prices - a.prices);
+            flattenedArray.sort((a, b) => b.p - a.p);
         } else if (val === "asc") {
-            flattenedArray.sort((a, b) => a.prices - b.prices);
+            flattenedArray.sort((a, b) => a.p - b.p);
         }
         display(flattenedArray);
     });
