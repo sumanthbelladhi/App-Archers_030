@@ -9,6 +9,15 @@ body {
     margin: auto;
 }
 
+.search-input {
+    width: initial;
+    transition: width 0.3s ease-in-out;
+}
+
+#links {
+    transition: display 0.3s ease-in-out;
+}
+
 #top-nav {
     background-color: rgb(244, 245, 249);
 }
