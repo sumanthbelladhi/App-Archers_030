@@ -194,3 +194,23 @@ function display(arr) {
         container.append(card);
     });
 }
+
+// responsive
+let h = document.getElementById("hamburger");
+let isMenuVisible = false;
+
+h.addEventListener("click", function() {
+    if (isMenuVisible) {
+        h.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+        document.getElementById("links").classList.add("remove");
+        document.getElementById("links").classList.remove("show");
+
+        isMenuVisible = false;
+    } else {
+        h.innerHTML = `<i class="fa-solid fa-xmark fa-lg"></i>`;
+        document.getElementById("links").classList.add("show");
+        document.getElementById("links").classList.remove("remove");
+
+        isMenuVisible = true;
+    }
+});

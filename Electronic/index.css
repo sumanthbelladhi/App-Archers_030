@@ -1,8 +1,4 @@
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
-
 body {
     font-family: Helvetica, sans-serif;
     margin: 0;
@@ -222,10 +218,6 @@ section {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-
-    
-    background-color: rgb(225, 229, 237);
-
 }
 
 .product-card:hover {
@@ -238,6 +230,7 @@ section {
     height: auto;
     margin-bottom: 15px;
     transition: all 0.2s ease-in-out;
+    background-color: rgb(247, 248, 250);
 }
 
 .product-card img:hover {
@@ -258,20 +251,22 @@ section {
 .product-details p {
     margin-top: 20px;
     font-size: .5em;
-
 }
 
 @media (max-width: 768px) {
     .product-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for medium screens */
     }
 }
 
 @media (max-width: 480px) {
     .product-container {
-        grid-template-columns: 1fr; /* Single column for small screens */
+        grid-template-columns: 1fr;
+        /* Single column for small screens */
     }
 }
+
 .favorite-icon {
     position: absolute;
     top: 10px;
@@ -279,5 +274,3 @@ section {
     cursor: pointer;
     z-index: 1;
 }
-
-

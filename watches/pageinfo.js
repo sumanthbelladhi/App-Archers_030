@@ -24,6 +24,7 @@ document.onclick = function() {
 console.log(data);
 var flattenedArray;
 var favData = [];
+
 if (data && data.data && Array.isArray(data.data)) {
     const detailedproducts = data.data;
     console.log(detailedproducts);
@@ -96,4 +97,23 @@ images.forEach(ele => {
     ele.path = baseUrl + ele.path;
     img.src = ele.path
     document.getElementById("first").append(img)
+});
+
+let h1 = document.getElementById("hamburger");
+let isMenuVisible = false;
+
+h1.addEventListener("click", function() {
+    if (isMenuVisible) {
+        h1.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+        document.getElementById("links").classList.add("remove");
+        document.getElementById("links").classList.remove("show");
+
+        isMenuVisible = false;
+    } else {
+        h1.innerHTML = `<i class="fa-solid fa-xmark fa-lg"></i>`;
+        document.getElementById("links").classList.add("show");
+        document.getElementById("links").classList.remove("remove");
+
+        isMenuVisible = true;
+    }
 });
