@@ -12,6 +12,10 @@
     <link rel="icon" href="/App-Archers_030/Untitled design.png" type="image/png">
     <link rel="stylesheet" href="/App-Archers_030/Topics-Pages/Manga Collection/manga.css">
 
+    <head>
+        <base href="/App-Archers_030/">
+    </head>
+
     <script src="https://kit.fontawesome.com/c70722c963.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,10 +34,11 @@
             <div class="container">
                 <h1>MASIO</h1>
                 <div id="links" class="remove">
-                    <small><a href="/App-Archers_030/watches/index.html">Watches</a></small>
-                    <small><a href="/App-Archers_030/Electronic/index.html">Electronic Musical Instruments</a></small>
-                    <small><a href="/App-Archers_030/Calculators/index.html">Calculators</a></small>
-                    <small><a href="/App-Archers_030/Printers/index.html">Label Printers & Others</a></small>
+                    <small><a href="watches/index.html">Watches</a></small>
+                    <small><a href="Electronic/index.html">Electronic Musical Instruments</a></small>
+                    <small><a href="Calculators/index.html">Calculators</a></small>
+                    <small><a href="Printers/index.html">Label Printers & Others</a></small>
+
                 </div>
                 <div class="search-wrapper">
                     <i class="fas fa-search search-icon" id="search"></i>
@@ -51,8 +56,7 @@
 
     <div class="slider1">
         <div class="slides1">
-            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/gshock-manga-collection/_jcr_content/root/responsivegrid/teaser.casiocoreimg.jpeg/1721202291420/casio-1920x816-manga.jpeg"
-                alt="Shubhman Gill" class="slide1">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/gshock-manga-collection/_jcr_content/root/responsivegrid/teaser.casiocoreimg.jpeg/1721202291420/casio-1920x816-manga.jpeg" alt="Shubhman Gill" class="slide1">
         </div>
     </div>
 
@@ -65,31 +69,25 @@
     <div class="card-container">
         <!-- Card 1 with image -->
         <div class="card">
-            <img src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100mng-2a/assets/GA-2100MNG-2A.png.transform/main-visual-sp/image.png"
-                alt="Image 1">
+            <img src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100mng-2a/assets/GA-2100MNG-2A.png.transform/main-visual-sp/image.png" alt="Image 1">
             <h3>GA-2100MNG-2A</h3>
 
         </div>
 
         <!-- Card 2 with only text -->
         <div class="card">
-            <p>Step into the pages of your favorite manga with a G-SHOCK that captures the world of Japan’s celebrated
-                comic books.</p>
-            <p>The GA-2100 with its iconic octagonal bezel features a band, bezel and dial printed in the screentone
-                technique used by manga artists to apply texture and shading, adding depth to two-dimensional drawings.
+            <p>Step into the pages of your favorite manga with a G-SHOCK that captures the world of Japan’s celebrated comic books.</p>
+            <p>The GA-2100 with its iconic octagonal bezel features a band, bezel and dial printed in the screentone technique used by manga artists to apply texture and shading, adding depth to two-dimensional drawings.
             </p>
-            <p>The playful design is full of manga-inspired details. Check out the indicator on the 9 o’clock inset dial
-                shaped like the speech balloons that appear in comic books and the iconic manga onomatopoeia — Don!, the
-                Japanese equivalent of “Bam!” — engraved on the case back.</p>
-            <p> In sky blue or classic white, this watch celebrates Japanese pop culture with a cool design dedicated to
-                manga lovers everywhere.</p>
+            <p>The playful design is full of manga-inspired details. Check out the indicator on the 9 o’clock inset dial shaped like the speech balloons that appear in comic books and the iconic manga onomatopoeia — Don!, the Japanese equivalent of “Bam!”
+                — engraved on the case back.</p>
+            <p> In sky blue or classic white, this watch celebrates Japanese pop culture with a cool design dedicated to manga lovers everywhere.</p>
 
         </div>
 
         <!-- Card 3 with image -->
         <div class="card">
-            <img src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100mng-7a/assets/GA-2100MNG-7A.png.transform/main-visual-sp/image.png"
-                alt="Image 2">
+            <img src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GA/GA2/ga-2100mng-7a/assets/GA-2100MNG-7A.png.transform/main-visual-sp/image.png" alt="Image 2">
             <h3>GA-2100MNG-7A</h3>
 
         </div>
@@ -102,8 +100,7 @@
     <!-- -------------------------------------------- -->
     <div class="slider1">
         <div class="slides1">
-            <img src="https://gshock.casio.com/content/casio/locales/in/en/brands/gshock/Team-G-SHOCK/_jcr_content/root/responsivegrid/teaser_1915338856_co.casiocoreimg.jpeg/1717764354680/website-37.jpeg"
-                alt="Products Collections" class="slide1">
+            <img src="https://gshock.casio.com/content/casio/locales/in/en/brands/gshock/Team-G-SHOCK/_jcr_content/root/responsivegrid/teaser_1915338856_co.casiocoreimg.jpeg/1717764354680/website-37.jpeg" alt="Products Collections" class="slide1">
         </div>
     </div>
     <br><br>
@@ -164,12 +161,12 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.getElementById('hamburger');
             const links = document.getElementById('links');
             let isMenuVisible = false;
 
-            hamburger.addEventListener('click', function () {
+            hamburger.addEventListener('click', function() {
                 if (isMenuVisible) {
                     hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
                     links.classList.add('remove');
@@ -183,7 +180,6 @@
                 }
             });
         });
-
     </script>
 
 
