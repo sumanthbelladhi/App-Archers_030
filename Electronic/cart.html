@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELECTRONICS | MASIO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <title>Cart | MASIO</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="shortcut icon" href="/App-Archers_030/watches/Watches Images/Masio Fevicon.png" type="image/x-icon">
-    <link rel="icon" href="./Untitled design.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css">
     <script src="https://kit.fontawesome.com/c70722c963.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-    <!-- Navigation bar -->
     <nav>
         <div id="top-nav">
             <div class="container">
@@ -34,50 +29,17 @@
                 <div class="search-wrapper">
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" class="search-input" placeholder="Search...">
-                    <a href="/App-Archers_030/Electronic/cart.html" id="cart-link">
+                    <a href="#" id="cart-link">
                         <i class="fa-regular fa-heart" id="cart"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- Main content -->
     <main>
-        <div>
-            <img id="main_image" src="https://www.casio.com/content/casio/locales/in/en/products/electronic-musical-instruments/_jcr_content/root/responsivegrid/image_1182337914.casiocoreimg.jpeg/1691729171630/privia-casio-banner.jpeg" alt="Electronic Musical Instruments">
-        </div>
+        <h1 style="margin-bottom: 600px;margin-right:680px ;">Favourites</h1>
+        <div id="cart-container"></div>
     </main>
-    <!-- Below navigation bar -->
-    <nav id="below">
-        <div id="below-nav">
-            <div class="container">
-                <h3>Electronic Musical Instruments</h3>
-                <div>
-                    <small><a href="#">Brand Site</a></small>
-                    <small><a href="#">Store Search</a></small>
-                    <small><a href="#">Catalog</a></small>
-                    <small><a href="#">Electronic Musical Instruments AR</a></small>
-                    <small><a href="#">Apps</a></small>
-                    <small><a href="#">Old Models</a></small>
-                    <small><a href="#">Support</a></small>
-                </div>
-            </div>
-        </div>
-        <hr>
-    </nav>
-    <!-- Sorting -->
-    <div class="sorting container">
-        <select id="sort" onchange="sortProducts()">
-            <option value="default">Please choose to sort</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-        </select>
-    </div>
-    <!-- Product display -->
-    <section>
-        <div id="product-container" class="product-container"></div>
-    </section>
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div id="footer-one">
@@ -112,6 +74,52 @@
             </div>
         </div>
     </footer>
-    <script src="./index.js"></script>
+    <script>
+        function displayCart() {
+            const cartContainer = document.getElementById('cart-container');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cartContainer.innerHTML = '';
+
+            cart.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+
+                const productImage = document.createElement('img');
+                productImage.src = product.image;
+                productImage.alt = product.model;
+
+                const productDetails = document.createElement('div');
+                productDetails.className = 'details';
+
+                const productName = document.createElement('h4');
+                productName.textContent = product.model;
+
+                const productPrice = document.createElement('p');
+                productPrice.textContent = product.price;
+
+                const removeIcon = document.createElement('div');
+                removeIcon.className = 'favorite-icon';
+                removeIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                removeIcon.onclick = () => removeFromCart(product.id);
+
+                productDetails.appendChild(productName);
+                productDetails.appendChild(productPrice);
+                productCard.appendChild(productImage);
+                productCard.appendChild(productDetails);
+                productCard.appendChild(removeIcon);
+
+                cartContainer.appendChild(productCard);
+            });
+        }
+
+        function removeFromCart(productId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(product => product.id !== productId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        window.onload = displayCart;
+    </script>
 </body>
 </html>
