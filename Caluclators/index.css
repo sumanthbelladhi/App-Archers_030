@@ -4,6 +4,11 @@ body {
     margin: auto;
 }
 
+.container {
+    max-width: 1330px;
+    margin: auto;
+}
+
 .search-input {
     width: initial;
     transition: width 0.3s ease-in-out;
@@ -11,11 +16,6 @@ body {
 
 #links {
     transition: display 0.3s ease-in-out;
-}
-
-.container {
-    max-width: 1330px;
-    margin: auto;
 }
 
 #top-nav {
@@ -182,7 +182,6 @@ img.displaySlide {
 
 /* Main End */
 
-
 /*3 content*/
 
 main {
@@ -196,6 +195,18 @@ main {
     gap: 20px;
     padding: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (max-width: 900px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
 }
 
 #card {
@@ -241,4 +252,37 @@ main {
     font-size: 14px;
     color: black;
     margin: 5px 0;
+}
+
+.badge-new {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
 }
