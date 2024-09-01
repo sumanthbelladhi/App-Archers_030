@@ -6,6 +6,125 @@ body {
 
 
 /* NAVBAR END */
+#top-nav {
+  background-color: rgb(244, 245, 249);
+}
+
+#top-nav .container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 5px;
+}
+
+small a {
+  text-decoration: none;
+  color: black;
+  font-weight: 530;
+  padding: 0px 15px;
+}
+
+small a:hover {
+  text-decoration: underline;
+}
+
+#nav {
+  margin: 1em 2em 0.1em 5em;
+}
+
+#nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav h1 {
+  font-family: "Teko", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: 0.0001px;
+  color: #003087;
+  margin: 0;
+  padding: 0;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 10px 10px 10px 20px;
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: width 0.3s ease-in-out;
+}
+
+.search-icon {
+  font-size: 16px;
+  color: #999;
+}
+
+#hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  #nav {
+      margin: 10px;
+  }
+
+  #nav h1 {
+      margin: 0;
+  }
+
+  #hamburger {
+      display: block;
+  }
+
+  #links {
+      display: none;
+  }
+
+  .search-icon {
+      display: none;
+  }
+  .search-input{
+    display: none;
+}
+
+
+  .show {
+      display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      position: absolute;
+      background-color: #003087;
+      top: 50px;
+      left: 0;
+      padding: 10px;
+      z-index: 1;
+  }
+
+  .show a {
+      display: block;
+      margin-block: 10px;
+      text-align: center;
+      color: white;
+      border-bottom: 1px solid white;
+      padding: 10px;
+  }
+
+  .remove {
+      display: none !important;
+  }
+}
 
 /* MAIN START */
 
@@ -172,5 +291,68 @@ body {
  /* ---------------------- */ 
 /* FOOTER START */
 
+/* Footer Styles */
+footer {
+  background-color: rgb(244, 245, 249);
+  padding: 2em 0em;
+}
+footer a {
+  color: black; /* Set the text color to black */
+  text-decoration: none; /* Remove underline if desired */
+}
 
+footer a:hover {
+  text-decoration: underline; /* Add underline on hover for better UX */
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#footer-one {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  margin: 2em;
+}
+
+#footer-one a {
+  color: rgb(138, 138, 138);
+}
+
+#footer-two {
+  display: flex;
+  gap: 2em;
+  cursor: pointer;
+}
+
+#footer-three,
+#footer-four,
+#footer-five {
+  text-align: center;
+  margin: 1em 0;
+}
+
+#footer-five small {
+  display: block;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  footer .container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  #footer-one,
+  #footer-three {
+      display: none;
+  }
+
+  #footer-two {
+      margin-left: 5px;
+  }
+}
 /* FOOTER END */
