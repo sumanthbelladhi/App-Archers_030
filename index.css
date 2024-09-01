@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+body {
+  font-family: Helvetica, sans-serif;
+  margin: auto;
+}
+
+/* ------------------NavBar---------------- */
+
+/* Header Styles */
+/* General Styles */
+.container {
+    max-width: 1330px;
+    margin: auto;
+}
+
+.search-input {
+    width: initial;
+    transition: width 0.3s ease-in-out;
+}
+
+
+/* General Styles */
+
+#links {
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#top-nav {
+    background-color: rgb(244, 245, 249);
+}
+
+#top-nav .container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 5px;
+}
+
+small a {
+    text-decoration: none;
+    color: black;
+    font-weight: 530;
+}
+
+small a:hover {
+    text-decoration: underline;
+}
+
+#nav {
+    margin: 1em 2em 0.1em 5em;
+}
+
+#nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav h1 {
+    font-family: "Teko", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: 0.0001px;
+    color: #003087;
+    margin: 0;
+    padding: 0;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 10px 10px 10px 20px;
+    width: 200px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.search-icon {
+    font-size: 16px;
+    color: #999;
+}
+
+#hamburger i {
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 700px) {
+    #nav {
+        margin: 10px;
+    }
+    #nav h1 {
+        margin: 0;
+    }
+    #hamburger i {
+        display: block;
+    }
+    #links,
+    #search,
+    .search-input {
+        display: none;
+    }
+    .show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+        position: absolute;
+        background-color: #003087;
+        top: 50px;
+        z-index: 1;
+    }
+    .show a {
+        display: block;
+        margin-block: 10px;
+        text-align: center;
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+    }
+    .remove {
+        display: none;
+    }
+    .remove a {
+        display: none;
+    }
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: auto;
+        width: 90%;
+    }
+    #footer a {
+        color: black;
+    }
+    #footer-one,
+    #footer-three {
+        display: none;
+    }
+    #footer-two {
+        order: 3;
+        width: 90%;
+        padding-inline: 10px;
+    }
+    #footer-four {
+        order: 4;
+        width: 90%;
+        padding-inline: 10px;
+    }
+    #footer-five {
+        order: 5;
+        width: 90%;
+        padding-inline: 10px;
+    }
+}
+
+/* ------------------NavBar---------------- */
+
+.slider1 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider1 .slides1 {
+  display: flex; /* Use flexbox to align images in a row */
+  width: 100%;
+  transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.slider1 img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.slider1 button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
+}
+
+.Previous2 {
+  left: 0;
+}
+
+.Next2 {
+  right: 0;
+}
+
+/* //Second Carousel */
+
+.slider2 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider2 .slides2 {
+  display: flex; /* Use flexbox to align images in a row */
+  width: 100%;
+  transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.slider2 img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.slider2 button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
+}
+
+.Previous1 {
+  left: 0;
+}
+
+.Next1 {
+  right: 0;
+}
+
+/* //Third Carousel */
+
+.slider3 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider3 .slides3 {
+  display: flex; /* Use flexbox to align images in a row */
+  width: 100%;
+  transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.slider3 img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.slider3 button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
+}
+
+.Previous3 {
+  left: 0;
+}
+
+.Next3 {
+  right: 0;
+}
+
+/*4th Carousel  */
+
+.slider4 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider4 img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+img.displaySlide4 {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slider4 button {
+  position: absolute;
+  top: 46%;
+  transform: translate(-1%);
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  /* border-radius: 50%; */
+  padding: 4px 8px;
+  border: none;
+}
+
+.Previous4 {
+  left: 0px;
+}
+
+.Next4 {
+  right: 0px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* 5th image */
+.slider5 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider5 img {
+  width: 100%;
+  height: auto;
+  /* display: none; */
+}
+
+/* 6th image */
+
+.slider6 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider6 img {
+  width: 100%;
+  height: auto;
+  /* display: none; */
+}
+
+/* ///TOPICS CSS START */
+
+.topics {
+  max-width: 100%;
+  padding: 20px;
+  text-align: left;
+}
+.topi {
+  padding-left: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card {
+  position: relative;
+  width: calc(20% - 20px);
+  overflow: hidden;
+  cursor: pointer;
+  /* border-radius: 10px; */
+
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card img:hover {
+  transform: scale(1.09);
+}
+
+.shockTeam {
+  font-size: 12px;
+  padding: 12px 15px 0px 12px;
+  font-weight: 600;
+}
+
+.shockTeam1 {
+  font-size: 10px;
+  padding: 0px 14px;
+}
+.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  width: calc(20% - 20px);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card img:hover {
+  transform: scale(1.09); /* Scale effect on hover */
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: calc(25% - 20px); /* 4 cards in a row */
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: calc(33.33% - 20px); /* 3 cards in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards in a row */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: calc(100% - 20px); /* 1 card in a row */
+  }
+}
+
+/* ------------------------------ */
+
+/* Category Section Styles */
+.category-section {
+  max-width: 100%;
+  padding: 20px;
+  text-align: left;
+}
+
+.category-heading {
+  padding-left: 10px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Card Wrapper Styles */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Equal spacing between cards */
+  gap: 20px; /* Gap between cards */
+}
+
+/* Product Card Styles */
+.product-card {
+  position: relative;
+  width: calc(25% - 20px); /* 4 cards per row */
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 8px; /* Rounded corners */
+  background: #fff; /* Card background color */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Card shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card Image Styles */
+.product-card img {
+  width: 100%;
+  height: 80%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Card Title Styles */
+.card-title {
+  font-size: 1rem;
+  padding: 10px 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .product-card {
+    width: calc(33.33% - 20px); /* 3 cards in a row */
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card {
+    width: calc(50% - 20px); /* 2 cards in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(100% - 20px); /* 1 card in a row */
+  }
+}
+/* ----------------------------------- */
+/* Footer Styles */
+
+/* TOPIC CSS END *
+
+
+/* FOOTER START */
+
+/* Footer Styles */
+footer {
+  background-color: rgb(244, 245, 249);
+  padding: 2em 0em;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#footer-one {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  margin: 2em;
+}
+
+#footer-one a {
+  color: rgb(138, 138, 138);
+}
+
+#footer-two {
+  display: flex;
+  gap: 2em;
+  cursor: pointer;
+}
+
+#footer-three,
+#footer-four,
+#footer-five {
+  text-align: center;
+  margin: 1em 0;
+}
+
+#footer-five small {
+  display: block;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  footer .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #footer-one,
+  #footer-three {
+    display: none;
+  }
+
+  #footer-two {
+    margin-left: 5px;
+  }
+}
+
+/* FOOTER END */

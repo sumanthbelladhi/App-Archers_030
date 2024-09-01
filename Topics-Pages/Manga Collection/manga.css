@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+body {
+  font-family: Helvetica, sans-serif;
+  /* margin: auto; */
+  margin: 0px;
+  padding: 0px;
+  /* background-color: black; */
+}
+
+
+/* -------------------------- */
+.slider1 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: -4px;
+  padding: 0px;
+}
+
+.slider1 img {
+  width: 100%;
+  height: auto;
+  /* display: none; */
+}
+
+/* --------------------------------- */
+
+
+.card-container {
+   display: flex;
+   max-width: 1300px;
+   width: auto;
+   margin: auto;
+   height: auto;
+   justify-content: space-between;
+   padding: 20px;
+   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.card {
+   background-color: white;
+   border-radius: 8px;
+   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+   flex: 1;
+   margin: 10px;
+   padding: 20px;
+   text-align: center;
+   min-width: 280px; /* Minimum width for each card */
+   max-width: 100%; /* Ensure cards don’t overflow the container */
+}
+
+.card img {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+   margin-bottom: 15px;
+}
+
+.card h3 {
+   margin: 10px 5px;
+   font-size: 14px;
+   text-align: center;
+}
+
+.card p {
+   color: #555;
+   margin-bottom: 40px;
+   font-size: 13px;
+   font-weight: bold;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+   .card-container {
+       flex-direction: column; /* Stack cards vertically on smaller screens */
+       align-items: center; /* Center align the cards */
+   }
+
+   .card {
+       width: 100%; /* Make each card take full width */
+       margin: 10px 0; /* Add vertical margin between cards */
+   }
+}
+
+/* Media query for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .card {
+       flex: 0 0 45%; /* Each card takes about half width */
+       max-width: 45%;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/* FOOTER START */
+
+
+/* FOOTER END */

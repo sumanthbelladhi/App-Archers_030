@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c70722c963.js" crossorigin="anonymous"></script>
+
+    <style>
+        .detail {
+            width: 100%;
+            margin: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        #first {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        @media(max-width:650px) {
+            .detail {
+                display: flex;
+                flex-direction: column;
+                margin: 0px;
+            }
+            #first::-webkit-scrollbar {
+                display: none;
+            }
+            #first {
+                display: flex;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                cursor: all-scroll;
+                margin: auto;
+                width: 90%;
+            }
+            #first img {
+                flex: none;
+                width: 100%;
+                height: auto;
+                scroll-snap-align: start;
+                margin: auto;
+            }
+            #second {
+                position: static !important;
+                margin: 0px;
+            }
+            button {
+                display: block;
+                margin: auto;
+                width: 70%;
+            }
+        }
+        
+        #second {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: sticky;
+            padding: 20px;
+            top: 100px;
+            bottom: 0;
+            align-self: start;
+        }
+        
+        .heros {
+            width: 50%;
+        }
+        
+        #second small {
+            font-size: .6em;
+            color: gray;
+        }
+        
+        h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            margin: 1px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        
+        button {
+            width: 80%;
+            border: 1px solid black;
+            cursor: pointer;
+            align-self: center;
+            background-color: transparent;
+            padding: 10px;
+            margin: 5px;
+        }
+        
+        button:first-of-type {
+            background-color: black;
+            color: white;
+            cursor: not-allowed;
+        }
+        
+        p {
+            margin-block: 30px;
+            font-size: .9em;
+            font-weight: 100;
+        }
+        
+        img {
+            cursor: pointer;
+        }
+        
+        img:hover {
+            scale: 1.01;
+        }
+        
+        i {
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+
+
+<body>
+    <nav>
+        <div id="top-nav">
+            <div class="container">
+                <small><a href="">Support</a></small>
+                <small><a href="">Corporate</a></small>
+            </div>
+
+        </div>
+        <div id="nav">
+            <div class="container" style="position: relative;">
+                <h1>
+                    MASIO
+                </h1>
+                <div id="links">
+                    <small><a href="/App-Archers_030/watches/index.html" >Watches</a></small>
+                    <small><a href="/App-Archers_030/Electronic/index.html">Electronic Musical Instruments</a></small>
+                    <small><a href="/App-Archers_030/Caluclators/index.html">Calculators</a></small>
+                    <small><a href="/App-Archers_030/Printers/index.html">Label Printers & Others</a></small>
+                </div>
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon" id="search"></i>
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <i class="fa-regular fa-heart" id="cart"></i>
+                    <div id="hamburger">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="detail" class="container">
+        <div class="detail">
+            <div id="first"></div>
+            <div id="second">
+                <h2 style="font-weight: 100;">G-SHOCK</h2>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <a href="Need Help?"></a>
+            <div id="footer-one">
+                <small><a href="">Products</a></small>
+                <small><a href="">Customer Support</a></small>
+                <small><a href="">Warranty</a></small>
+                <small><a href="">Corporate</a></small>
+            </div>
+            <div id="footer-two">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-twitter fa-xl"></i>
+                <i class="fa-brands fa-youtube fa-xl"></i>
+            </div>
+            <div id="footer-three">
+                <small><a href="">Privacy Policy</a></small>
+                <small><a href="">Labour Compliance</a></small>
+                <small><a href="">Secretarial (redirect)</a></small>
+                <small><a href="">CSR Policy</a></small>
+                <small><a href="">Cookie Policy</a></small>
+                <small><a href="">Terms of Use</a></small>
+                <small><a href="">Sitemap</a></small>
+                <small><a href="">Contact Us</a></small>
+                <small><a href="">India</a></small>
+            </div>
+            <div id="footer-four">
+                <small><a href="">© 2024 Casio India Co., Pvt. Ltd.</a></small>
+            </div>
+            <div id="footer-five">
+                <small>Please help us recycle e-waste and plastic waste responsibly.</small>
+                <small>For more information or e-waste pick up, please call 1800 2022746 </small>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script type="module" src="./pageinfo.js"></script>
+
+</html>

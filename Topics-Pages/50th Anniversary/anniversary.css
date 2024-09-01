@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+body {
+  font-family: Helvetica, sans-serif;
+  margin: auto;
+}
+
+
+/* NAVBAR END */
+
+/* MAIN START */
+
+.slider1 {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: -4px;
+  padding: 0px;
+}
+
+.slider1 img {
+  width: 100%;
+  height: auto;
+  /* display: none; */
+}
+
+/* MAIN END */
+.textArea {
+   background: rgb(111, 172, 173);
+   background: linear-gradient(
+     0deg,
+     rgba(111, 172, 173, 1) 0%,
+     rgba(255, 255, 255, 1) 100%
+   );
+   width: 100%;
+   text-align: center;
+   height: auto; /* Set the height to 700px */
+ }
+ 
+ .text-container {
+   max-width: 800px;
+   margin: auto;
+   padding: 20px;
+   word-spacing: 3px;
+   letter-spacing: 1px;
+   height: auto; /* Adjust this if needed */
+ }
+ 
+ .text1 {
+   padding-bottom: 20px;
+ }
+ 
+ .text1 h2 {
+   padding-top: 20px;
+   margin-bottom: 40px;
+   font-size: 30px;
+   font-weight: 800;
+ }
+ 
+ /* Adjust the spacing and style for the <p> tags */
+ .text-container p {
+   padding-bottom: 20px;
+   font-size: 15px;
+   font-weight: bold;
+   line-height: 2; /* Add line height for spacing between lines */
+ }
+ 
+ /* Responsive Styles */
+@media screen and (max-width: 768px) {
+   .text-container {
+     max-width: 100%; /* Allow the container to fill the screen width */
+     padding: 10px; /* Reduce padding on smaller screens */
+   }
+ 
+   .text1 h2 {
+     font-size: 28px; /* Reduce font size for smaller screens */
+   }
+ 
+   .text-container p {
+     font-size: 18px; /* Reduce font size for paragraphs */
+     line-height: 1.5; /* Adjust line height for readability */
+   }
+ }
+ 
+ @media screen and (max-width: 480px) {
+   .text1 h2 {
+     font-size: 24px; /* Further reduce font size for very small screens */
+   }
+ 
+   .text-container p {
+     font-size: 16px; /* Further reduce font size for paragraphs */
+     line-height: 1.4; /* Adjust line height for readability */
+     padding-bottom: 30px; /* Adjust padding between paragraphs */
+   }
+ }
+ /* ---------------------------- */
+
+/* General Styles */
+ /* Card Container Styles */
+/* General Styles */
+
+ /* Card Container Styles */
+ .responsive-card-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center; /* Center align cards */
+   gap: 20px; /* Gap between cards */
+   padding: 5px 10px; /* Padding to maintain space from the container sides */
+   margin: auto; /* Center the container */
+   max-width: 800px; /* Maximum width for the container */
+ }
+ 
+ /* Card Styles */
+ .responsive-card {
+   background-color: #fff;
+   border-radius: 8px;
+   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+   width: calc(50% - 20px); /* 2 cards per row with equal gap */
+   text-align: center;
+   padding: 20px;
+   transition: transform 0.2s;
+   box-sizing: border-box; /* Include padding and border in element's total width */
+ }
+ 
+
+ /* Card Image Styles */
+ .responsive-card-image {
+   width: 60%;
+   height: 60%;
+   border-radius: 8px;
+   margin-bottom: 10px;
+   
+ }
+ 
+ /* Card Title Styles */
+ .responsive-card-title {
+   font-size: 1.2rem;
+   margin-bottom: 15px;
+   color: #333;
+ }
+ 
+ /* View More Button Styles */
+ .responsive-card-button {
+   display: inline-block;
+   padding: 15px 20px;
+   background-color: #ffffff;
+   color: #000000;
+   text-decoration: none;
+   /* border-radius: 5px; */
+   border: 1px solid rgb(95, 76, 76);
+   width: 9rem;
+   transition: background-color 1s;
+ }
+ 
+ .responsive-card-button:hover {
+   /* background-color: #0056b3; */
+   border: 2px solid black;
+ }
+ 
+ /* Responsive Styles */
+ @media screen and (max-width: 768px) {
+   .responsive-card {
+     width: 100%;
+   }
+ }
+ 
+
+
+
+
+
+ /* ---------------------- */ 
+/* FOOTER START */
+
+
+/* FOOTER END */
