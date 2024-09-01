@@ -5,161 +5,125 @@ body {
 }
 
 /* ------------------NavBar---------------- */
-
-/* Header Styles */
-/* General Styles */
-.container {
-    max-width: 1330px;
-    margin: auto;
-}
-
-.search-input {
-    width: initial;
-    transition: width 0.3s ease-in-out;
-}
-
-
-/* General Styles */
-
-#links {
-    display: flex;
-    gap: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
 #top-nav {
-    background-color: rgb(244, 245, 249);
+  background-color: rgb(244, 245, 249);
 }
 
 #top-nav .container {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 5px;
 }
 
+
 small a {
-    text-decoration: none;
-    color: black;
-    font-weight: 530;
+  text-decoration: none;
+  color: black;
+  font-weight: 530;
+  padding: 0px 15px;
 }
 
 small a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #nav {
-    margin: 1em 2em 0.1em 5em;
+  margin: 1em 2em 0.1em 5em;
 }
 
 #nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #nav h1 {
-    font-family: "Teko", sans-serif;
-    font-weight: 700;
-    font-size: 35px;
-    letter-spacing: 0.0001px;
-    color: #003087;
-    margin: 0;
-    padding: 0;
+  font-family: "Teko", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: 0.0001px;
+  color: #003087;
+  margin: 0;
+  padding: 0;
 }
 
 .search-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .search-input {
-    padding: 10px 10px 10px 20px;
-    width: 200px;
-    height: 20px;
-    border: none;
-    border-bottom: 1px solid black;
+  padding: 10px 10px 10px 20px;
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: width 0.3s ease-in-out;
 }
 
 .search-icon {
-    font-size: 16px;
-    color: #999;
+  font-size: 16px;
+  color: #999;
 }
 
-#hamburger i {
-    cursor: pointer;
+#hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  #nav {
+      margin: 10px;
+  }
+
+  #nav h1 {
+      margin: 0;
+  }
+
+  #hamburger {
+      display: block;
+  }
+
+  #links {
+      display: none;
+  }
+
+  .search-icon {
+      display: none;
+  }
+  .search-input{
     display: none;
 }
-@media (max-width: 700px) {
-    #nav {
-        margin: 10px;
-    }
-    #nav h1 {
-        margin: 0;
-    }
-    #hamburger i {
-        display: block;
-    }
-    #links,
-    #search,
-    .search-input {
-        display: none;
-    }
-    .show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 40px;
-        position: absolute;
-        background-color: #003087;
-        top: 50px;
-        z-index: 1;
-    }
-    .show a {
-        display: block;
-        margin-block: 10px;
-        text-align: center;
-        color: white;
-        border-bottom: 1px solid white;
-        padding: 10px;
-    }
-    .remove {
-        display: none;
-    }
-    .remove a {
-        display: none;
-    }
-    footer .container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin: auto;
-        width: 90%;
-    }
-    #footer a {
-        color: black;
-    }
-    #footer-one,
-    #footer-three {
-        display: none;
-    }
-    #footer-two {
-        order: 3;
-        width: 90%;
-        padding-inline: 10px;
-    }
-    #footer-four {
-        order: 4;
-        width: 90%;
-        padding-inline: 10px;
-    }
-    #footer-five {
-        order: 5;
-        width: 90%;
-        padding-inline: 10px;
-    }
+
+
+  .show {
+      display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      position: absolute;
+      background-color: #003087;
+      top: 50px;
+      left: 0;
+      padding: 10px;
+      z-index: 1;
+  }
+
+  .show a {
+      display: block;
+      margin-block: 10px;
+      text-align: center;
+      color: white;
+      border-bottom: 1px solid white;
+      padding: 10px;
+  }
+
+  .remove {
+      display: none !important;
+  }
 }
 
 /* ------------------NavBar---------------- */
