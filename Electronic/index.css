@@ -118,22 +118,17 @@ small a:hover {
     }
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+.slider5 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
-#main_image {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-    padding: 0;
+.slider5 img {
+    width: 100%;
+    height: auto;
+    /* display: none; */
 }
 
 section {
