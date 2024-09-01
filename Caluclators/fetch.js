@@ -498,51 +498,52 @@ const data = {
       }
     ]
   }
+  export default data;
 
-const baseUrl = "https://www.casio.com";
-var prices = [];
+// const baseUrl = "https://www.casio.com";
+// var prices = [];
 
-if (data && data.data && Array.isArray(data.data)) {
-    const products = data.data;
+// if (data && data.data && Array.isArray(data.data)) {
+//     const products = data.data;
 
-    const updatedProducts = products.map(product => {
-        if (product.productAssets && product.productAssets.path) {
-            product.productAssets.path = baseUrl + product.productAssets.path;
-        }
-        prices.push(product.dispPrice)
-        return product.productAssets;
-    });
+//     const updatedProducts = products.map(product => {
+//         if (product.productAssets && product.productAssets.path) {
+//             product.productAssets.path = baseUrl + product.productAssets.path;
+//         }
+//         prices.push(product.dispPrice)
+//         return product.productAssets;
+//     });
 
-    const flattenedArray = updatedProducts.flat(Infinity);
-    console.log(flattenedArray);
-    console.log(prices);
-    display(flattenedArray)
-}
+//     const flattenedArray = updatedProducts.flat(Infinity);
+//     console.log(flattenedArray);
+//     console.log(prices);
+//     display(flattenedArray)
+// }
 
-function display(flattenedArray) {
-    let container = document.getElementById("container");
-    i = 0;
-    flattenedArray.forEach(ele => {
-        let card = document.createElement("div");
-        card.setAttribute("id", "card");
+// function display(flattenedArray) {
+//     let container = document.getElementById("container");
+//     i = 0;
+//     flattenedArray.forEach(ele => {
+//         let card = document.createElement("div");
+//         card.setAttribute("id", "card");
 
-        let img = document.createElement("img");
-        img.src = ele.path;
-        let brand = document.createElement("p");
-        brand.innerText = "Scientific Calculators";
-        let title = document.createElement("h2");
-        title.innerText = ele.title ? ele.title : "FX-350MS-2-W1-DT";
+//         let img = document.createElement("img");
+//         img.src = ele.path;
+//         let brand = document.createElement("p");
+//         brand.innerText = "Scientific Calculators";
+//         let title = document.createElement("h2");
+//         title.innerText = ele.title ? ele.title : "FX-350MS-2-W1-DT";
 
-        let MRP = document.createElement("small")
-        MRP.classList.add("mrp")
-        MRP.innerText = "MRP"
+//         let MRP = document.createElement("small")
+//         MRP.classList.add("mrp")
+//         MRP.innerText = "MRP"
 
 
-        let price = document.createElement("small")
-        price.innerText = prices[i]
-        i += 1
+//         let price = document.createElement("small")
+//         price.innerText = prices[i]
+//         i += 1
 
-        card.append(img, brand, title, MRP, price);
-        container.append(card);
-    });
-}
+//         card.append(img, brand, title, MRP, price);
+//         container.append(card);
+//     });
+// }

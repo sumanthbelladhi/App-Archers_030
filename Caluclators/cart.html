@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-SHOCK | MASIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./Watches Images/Masio Fevicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c70722c963.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+<body>
+    <nav>
+        <div id="top-nav">
+            <div class="container">
+                <small><a href="">Support</a></small>
+                <small><a href="">Corporate</a></small>
+            </div>
+
+        </div>
+        <div id="nav">
+            <div class="container">
+                <h1>
+                    MASIO
+                </h1>
+                <div id="links">
+                    <small><a href="/App-Archers_030/watches/index.html">Watches</a></small>
+                    <small><a href="/App-Archers_030/Electronic/index.html">Electronic Musical Instruments</a></small>
+                    <small><a href="/App-Archers_030/Caluclators/index.html">Calculators</a></small>
+                    <small><a href="/App-Archers_030/Printers/index.html">Label Printers & Others</a></small>
+                </div>
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <i class="fa-regular fa-heart" id="cart"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Watches Main View  -->
+
+    <div class="slider">
+        <div class="slides">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel/item_1716539814246.casiocoreimg.jpeg/1716540152182/main-banner.jpeg" alt="Shubhman Gill" class="slide">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel/item_1716539812624.casiocoreimg.jpeg/1716539895020/vk-casio-bannerdesktop.jpeg" alt="Vicky Kaushal" class="slide">
+        </div>
+
+        <button class="Previous" onclick="prevSlide()"> &#10094 </button>
+        <button class="Next" onclick="nextSlide()"> &#10095 </button>
+    </div>
+
+    <!-- Watches Main View End -->
+
+    <!-- // -->
+    <div class="slider1">
+        <div class="slides1">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel_copy/item_1721711027014.casiocoreimg.jpeg/1721711054880/desktop-icons.jpeg" alt="" class="slide1">
+            <img src="https://www.casio.com/content/casio/locales/in/en/products/watches/gshock/_jcr_content/root/responsivegrid/carousel_copy/item_1721711029269.casiocoreimg.jpeg/1721711114468/desktop-2100.jpeg" alt="" class="slide1">
+        </div>
+
+        <button class="Previous2" onclick="prevSlide1()"> &#10094 </button>
+        <button class="Next2" onclick="nextSlide1()"> &#10095 </button>
+    </div>
+    <!-- // -->
+
+    <main id="content">
+        <h1 style="margin-left: 40px;">Favourites</h1>
+
+        <div id="container">
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="container">
+            <div id="footer-one">
+                <small><a href="">Products</a></small>
+                <small><a href="">Customer Support</a></small>
+                <small><a href="">Warranty</a></small>
+                <small><a href="">Corporate</a></small>
+            </div>
+            <div id="footer-two">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-twitter fa-xl"></i>
+                <i class="fa-brands fa-youtube fa-xl"></i>
+            </div>
+            <div id="footer-three">
+                <small><a href="">Privacy Policy</a></small>
+                <small><a href="">Labour Compliance</a></small>
+                <small><a href="">Secretarial (redirect)</a></small>
+                <small><a href="">CSR Policy</a></small>
+                <small><a href="">Cookie Policy</a></small>
+                <small><a href="">Terms of Use</a></small>
+                <small><a href="">Sitemap</a></small>
+                <small><a href="">Contact Us</a></small>
+                <small><a href="">India</a></small>
+            </div>
+            <div id="footer-four">
+                <small><a href="">© 2024 Casio India Co., Pvt. Ltd.</a></small>
+            </div>
+            <div id="footer-five">
+                <small>Please help us recycle e-waste and plastic waste responsibly.</small>
+                <small>For more information or e-waste pick up, please call 1800 2022746 </small>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    var cart = localStorage.getItem("cart");
+    cart = cart ? JSON.parse(cart) : [];
+
+    function display(arr) {
+        let container = document.getElementById("container");
+        container.innerHTML = "";
+
+        arr.forEach((ele, i) => {
+            let card = document.createElement("div");
+            card.setAttribute("id", "card");
+
+            let New = document.createElement("div");
+            New.className = "badge-new";
+            New.innerText = "NEW";
+
+            let favorite = document.createElement("div");
+            favorite.className = "favorite-icon";
+
+            // Check if the item is already in the cart
+            let isInCart = cart.some(e => e.id === ele.id); // This line should work fine now
+            favorite.innerHTML = isInCart ? `<i class="fa-regular fa-circle-xmark"></i>` : `<i class="fa-regular fa-heart" id="add"></i>`;
+
+            favorite.onclick = function() {
+                if (!isInCart) {
+                    favorite.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
+                    cart.push(ele);
+                    isInCart = true;
+                } else {
+                    favorite.innerHTML = `<i class="fa-regular fa-heart" id="add"></i>`;
+                    cart = cart.filter(e => e.id !== ele.id);
+                    isInCart = false;
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                display(cart)
+            }
+
+            let img = document.createElement("img");
+            img.src = ele.product.path;
+
+            img.onclick = function() {
+                window.location.href = `./pageinfo.html?id=${ele.id}`;
+            }
+
+            let brand = document.createElement("p");
+            brand.innerText = "G-SHOCK";
+
+            let title = document.createElement("h2");
+            title.innerText = ele.title;
+
+            let MRP = document.createElement("small");
+            MRP.classList.add("mrp");
+            MRP.innerText = "MRP";
+
+            let price = document.createElement("small");
+            price.innerText = ele.prices;
+
+            card.append(New, favorite, img, brand, title, MRP, price);
+            container.append(card);
+        });
+    }
+    display(cart)
+</script>

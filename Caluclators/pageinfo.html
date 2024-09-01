@@ -5,31 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="./Untitled design.png" type="image/png">
-
+    <link rel="stylesheet" href="./index.css">
     <script src="https://kit.fontawesome.com/c70722c963.js" crossorigin="anonymous"></script>
+
     <style>
-        .sort {
-            position: sticky;
-            top: 0;
-            z-index: 1;
-            background-color: rgb(0, 0, 83);
-            padding: 10px;
-            color: white;
-            margin-block: 20px;
-            align-self: center;
+        .detail {
+            width: 100%;
+            margin: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
         }
         
-        select {
-            border-radius: 10px;
+        #first {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        #second {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: sticky;
+            padding: 20px;
+            top: 100px;
+            bottom: 0;
+            align-self: start;
+        }
+        
+        .heros {
+            width: 50%;
+        }
+        
+        #second small {
+            font-size: .6em;
+            color: gray;
+        }
+        
+        h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            margin: 1px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        
+        button {
+            width: 80%;
+            border: 1px solid black;
+            cursor: pointer;
+            align-self: center;
+            background-color: transparent;
             padding: 10px;
+            margin: 5px;
+        }
+        
+        button:first-of-type {
+            background-color: black;
+            color: white;
+            cursor: not-allowed;
+        }
+        
+        p {
+            margin-block: 30px;
+            font-size: .9em;
+            font-weight: 100;
+        }
+        
+        img {
+            cursor: pointer;
+        }
+        
+        img:hover {
+            scale: 1.01;
+        }
+        
+        i {
+            cursor: pointer;
         }
     </style>
 </head>
+
+
 
 <body>
     <nav>
@@ -45,8 +104,8 @@
                 <h1>
                     MASIO
                 </h1>
-                <div id="links">
-                    <small><a href="/App-Archers_030/watches/index.html">Watches</a></small>
+                <div>
+                    <small><a href="/App-Archers_030\watches\index.html">Watches</a></small>
                     <small><a href="/App-Archers_030/Electronic/index.html">Electronic Musical Instruments</a></small>
                     <small><a href="/App-Archers_030/Caluclators/index.html">Calculators</a></small>
                     <small><a href="/App-Archers_030/Printers/index.html">Label Printers & Others</a></small>
@@ -59,33 +118,17 @@
             </div>
         </div>
     </nav>
-    <!-- Calculator Main View  -->
 
-    <div class="slider">
-        <div class="slides">
-            <img src="https://www.casio.com/content/casio/locales/in/en/products/scientific-calculators/_jcr_content/root/responsivegrid/carousel/item_1721970233954.casiocoreimg.jpeg/1721970256882/desktop-category-banner-1920x816-2.jpeg" alt="Shubhman Gill" class="slide">
-            <img src="https://www.casio.com/content/casio/locales/in/en/products/scientific-calculators/_jcr_content/root/responsivegrid/carousel/item_1721970235471.casiocoreimg.jpeg/1721970269845/desktop-category-banner-1920x816-1.jpeg" alt="Vicky Kaushal" class="slide">
+    <div id="detail">
+        <div class="container detail">
+            <div id="first"></div>
+            <div id="second">
+                <h2 style="font-weight: 100;">scientific-calculators</h2>
+            </div>
+
         </div>
-
-        <button class="Previous" onclick="prevSlide()"> &#10094 </button>
-        <button class="Next" onclick="nextSlide()"> &#10095 </button>
     </div>
 
-    <main id="content">
-        <div class="sort">
-            <select name="pets" id="sort">
-                        <option value="">Please choose to sort</option>
-                        <option value="asc">Low-High</option>
-                        <option value="desc">High-Low</option>
-            </select>
-        </div>
-        <div id="container">
-
-        </div>
-    </main>
-    
-
-    <!-- Calculator Main View End -->
     <footer>
         <div class="container">
             <div id="footer-one">
@@ -120,9 +163,9 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="index.js"></script>
 
-    <script type="module" src="fetch.js"></script>
 </body>
+<script type="module" src="./pageinfo.js"></script>
+<script type="module" src="fetch.js"></script>
 
 </html>
