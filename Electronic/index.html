@@ -25,6 +25,7 @@
         <div id="nav">
             <div class="container">
                 <h1>MASIO</h1>
+
                 <div id="links">
                     <small><a href="/App-Archers_030/watches/index.html">Watches</a></small>
                     <small><a href="/App-Archers_030/Electronic/index.html">Electronic Musical Instruments</a></small>
@@ -44,7 +45,9 @@
     <!-- top main image -->
     <main>
         <div>
-            <img id="main_image" src="https://www.casio.com/content/casio/locales/in/en/products/electronic-musical-instruments/_jcr_content/root/responsivegrid/image_1182337914.casiocoreimg.jpeg/1691729171630/privia-casio-banner.jpeg" alt="Electronic Musical Instruments">
+            <img id="main_image"
+                src="https://www.casio.com/content/casio/locales/in/en/products/electronic-musical-instruments/_jcr_content/root/responsivegrid/image_1182337914.casiocoreimg.jpeg/1691729171630/privia-casio-banner.jpeg"
+                alt="Electronic Musical Instruments">
         </div>
     </main>
     <!-- below nav bar -->
@@ -65,6 +68,15 @@
         </div>
         <hr>
     </nav>
+
+    <div class="sorting container">
+        <select id="sort" onchange="sortProducts()">
+            <option value="default">Please choose to sort</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+        </select>
+    </div>
+
     <!-- displaying the products -->
     <section>
         <div id="product-container" class="product-container"></div>

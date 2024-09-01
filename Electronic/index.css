@@ -2,11 +2,8 @@
 body {
     font-family: Helvetica, sans-serif;
     margin: 0;
-    /* Ensure no margin around the body */
     padding: 0;
-    /* Ensure no padding around the body */
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
 }
 
 .search-input {
@@ -25,14 +22,13 @@ body {
 
 #top-nav {
     background-color: rgb(244, 245, 249);
+    padding: 5px;
 }
 
 #top-nav .container {
     display: flex;
     justify-content: flex-end;
-    /* Align items to the end */
     gap: 20px;
-    padding: 5px;
 }
 
 small a {
@@ -47,12 +43,12 @@ small a:hover {
 
 #nav {
     margin: 1em 2em 0.1em 5em;
-    /* Adjust margins as needed */
 }
 
 #nav .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #nav h1 {
@@ -139,24 +135,17 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Full viewport height */
     margin: 0;
     padding: 0;
 }
 
 #main_image {
     width: 100vw;
-    /* Full viewport width */
     height: 100vh;
-    /* Full viewport height */
     object-fit: cover;
-    /* Cover the viewport, maintaining aspect ratio */
     display: block;
-    /* Remove bottom space/gap */
     margin: 0;
-    /* Remove any margin */
     padding: 0;
-    /* Remove any padding */
 }
 
 #below-nav {
@@ -167,14 +156,11 @@ main {
 #below-nav .container {
     display: flex;
     justify-content: space-between;
-    /* Pushes the h3 to the left and the a tags to the right */
     align-items: center;
-    /* Vertically center align items */
 }
 
 #below-nav h3 {
     margin: 0;
-    /* Remove default margin */
     font-size: 20px;
     font-weight: bold;
     color: black;
@@ -185,7 +171,6 @@ main {
     color: black;
     font-weight: 530;
     margin-left: 20px;
-    /* Adds space between the a tags */
 }
 
 #below-nav a:hover {
@@ -256,14 +241,45 @@ section {
 @media (max-width: 768px) {
     .product-container {
         grid-template-columns: repeat(2, 1fr);
-        /* Two columns for medium screens */
+    }
+
+    #nav {
+        margin: 0;
+    }
+
+    #nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    #links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+        transition: 0.3s;
     }
 }
 
 @media (max-width: 480px) {
     .product-container {
         grid-template-columns: 1fr;
-        /* Single column for small screens */
     }
 }
 
@@ -273,4 +289,20 @@ section {
     right: 10px;
     cursor: pointer;
     z-index: 1;
+}
+
+.sorting {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(0, 0, 83);
+    padding: 10px;
+    color: white;
+    margin-block: 20px;
+    align-self: center;
+}
+
+select {
+    border-radius: 10px;
+    padding: 10px;
 }

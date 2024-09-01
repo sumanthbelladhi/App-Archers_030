@@ -1,3 +1,4 @@
+
 const data = {
   products: [
     {
@@ -476,21 +477,35 @@ const data = {
     },
   ],
 };
+
+function parsePrice(price) {
+  return parseFloat(price.replace(/₹|,/g, ''));
+}
+
+function sortProducts() {
+  const sortValue = document.getElementById('sort').value;
+
+  if (sortValue === 'price-asc') {
+    data.products.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+  } else if (sortValue === 'price-desc') {
+    data.products.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+  }
+
+  displayProducts();
+}
+
 function displayProducts() {
   const productContainer = document.getElementById('product-container');
   productContainer.innerHTML = '';
 
-  // Accessing the products array from the data object
   data.products.forEach(product => {
     const productCard = document.createElement('div');
     productCard.className = 'product-card';
 
-    // Create and set up the image
     const productImage = document.createElement('img');
     productImage.src = product.image;
     productImage.alt = product.model;
 
-    // Create and set up the details container
     const productDetails = document.createElement('div');
     productDetails.className = 'details';
 
@@ -501,38 +516,34 @@ function displayProducts() {
     productPrice.textContent = product.price;
 
     productDetails.appendChild(productName);
-    productDetails.appendChild(productPrice)
+    productDetails.appendChild(productPrice);
 
-          // Create the favorite icon
-          const favoriteIcon = document.createElement('div');
-          favoriteIcon.className = 'favorite-icon';
-          favoriteIcon.innerHTML = product.isFavourite
-              ? `<i class="fa-solid fa-heart"></i>`
-              : `<i class="fa-regular fa-heart"></i>`;
-  
-          // Toggle favorite state on click
-          favoriteIcon.onclick = function(event) {
-              event.stopPropagation(); // Prevent the card click event from firing
-              const isCurrentlyFavorite = favoriteIcon.innerHTML.includes('fa-solid');
-              favoriteIcon.innerHTML = isCurrentlyFavorite
-                  ? `<i class="fa-regular fa-heart"></i>`
-                  : `<i class="fa-solid fa-heart"></i>`;
-              
-              // Update the product's favorite state in the data
-              product.isFavourite = !isCurrentlyFavorite;
-          };
-  
-          productCard.appendChild(productImage);
-          productCard.appendChild(productDetails);
-          productCard.appendChild(favoriteIcon);
-  
-          // Add click event to redirect to product.html with product ID
-          productCard.addEventListener('click', () => {
-              window.location.href = `product.html?id=${product.id}`;
-          });
-  
-          productContainer.appendChild(productCard);
-      });
-  }
-  
-  window.onload = displayProducts;
+    const favoriteIcon = document.createElement('div');
+    favoriteIcon.className = 'favorite-icon';
+    favoriteIcon.innerHTML = product.isFavourite
+        ? `<i class="fa-regular fa-circle-xmark"></i>`
+        : `<i class="fa-regular fa-heart"></i>`;
+
+    favoriteIcon.onclick = function(event) {
+        event.stopPropagation();
+        const isCurrentlyFavorite = favoriteIcon.innerHTML.includes('fa-solid');
+        favoriteIcon.innerHTML = isCurrentlyFavorite
+            ? `<i class="fa-regular fa-heart"></i>`
+            : `<i class="fa-regular fa-circle-xmark"></i>`;
+
+        product.isFavourite = !isCurrentlyFavorite;
+    };
+
+    productCard.appendChild(productImage);
+    productCard.appendChild(productDetails);
+    productCard.appendChild(favoriteIcon);
+
+    productCard.addEventListener('click', () => {
+        window.location.href = `product.html?id=${product.id}`;
+    });
+
+    productContainer.appendChild(productCard);
+  });
+}
+
+window.onload = displayProducts;
