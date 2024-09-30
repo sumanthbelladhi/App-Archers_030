@@ -3,7 +3,7 @@
 Masio
 ## Introduction
 
-Masio India Co. Pvt. Ltd. (CIC) operates in product categories including watches, clocks, electronic calculators, label printers, and electronic musical instruments. Today, Casio is known for its reliable product quality & exemplary innovations and is considered one of the world’s most recognized brands due to its diverse product range. Masio India Co., Pvt Ltd is headquartered in New Delhi. Casio India has established widespread network for distribution & product service across India.
+Masio is a modern e-commerce website inspired by Casio's official store, offering a wide range of watches and other electronic products. The project replicates the design and functionality of the Casio website, including the ability to browse products, view new releases, and explore detailed product pages.
 
 ## Project Type
 
